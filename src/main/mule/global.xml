@@ -25,7 +25,7 @@ http://www.mulesoft.org/schema/mule/opentelemetry http://www.mulesoft.org/schema
 		</db:mssql-connection>  
 	</db:config>    
 	<import doc:name="Import" doc:id="007b0029-2dae-43f4-b504-f9fe9bea773e" file="errorhandler.xml" doc:description="External Error Handler import"/>
-  	<opentelemetry:config name="OpenTelemetry_Config_OTLP" doc:name="OpenTelemetry Config" doc:id="12b85460-a1c5-4bfa-a1e6-21130fbb787c" serviceName="${otel.service.name}" spanAllProcessors="true" doc:description="Dynatrace OTEL config">
+<!--	<opentelemetry:config name="OpenTelemetry_Config_OTLP" doc:name="OpenTelemetry Config" doc:id="12b85460-a1c5-4bfa-a1e6-21130fbb787c" serviceName="${otel.service.name}" spanAllProcessors="true" doc:description="Dynatrace OTEL config">
 		<opentelemetry:resource-attributes >
 			<opentelemetry:attribute key="mule.env" value="${mule.env}" />
 			<opentelemetry:attribute key="deployment.environment" value="${mule.env}" />
@@ -40,7 +40,7 @@ http://www.mulesoft.org/schema/mule/opentelemetry http://www.mulesoft.org/schema
 				</opentelemetry:config-properties>
 			</opentelemetry:otlp-exporter>
 		</opentelemetry:exporter>
-	</opentelemetry:config>
+	</opentelemetry:config>  -->
 	<secure-properties:config name="Secure_Properties_Config" doc:name="Secure Properties Config" doc:id="c3a7fdfb-b37a-470d-a4b4-d11af2f7a564" file="secure-config-${mule.env}.yaml" key="${secure.key}" doc:description="Secure configuration properties file placeholder">
-	</secure-properties:config>
+	</secure-properties:config> 
 </mule>
