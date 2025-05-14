@@ -15,7 +15,7 @@ output application/java
 ---
 {
 	"queryParams": {
-		"clientNo": "33058",
+		"clientNo": "11704",
 		"ccy": "GBP",
 		"type": "103",
 		"value": "1000"
