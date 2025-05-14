@@ -1,13 +1,10 @@
 USE [MuleSoftBridge]
 GO
-
-/****** Object:  Table [mule].[CBS_FT_DWP]    Script Date: 14/05/2025 12:19:21 ******/
+/****** Object:  Table [mule].[CBS_FT_DWP]    Script Date: 14/05/2025 12:40:44 ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
-
 CREATE TABLE [mule].[CBS_FT_DWP](
 	[BNK_ID] [varchar](11) NULL,
 	[CC_BNK_ID] [varchar](2) NULL,
@@ -35,4 +32,5 @@ CREATE TABLE [mule].[CBS_FT_DWP](
 	[LIMIT_TO] [float] NULL
 ) ON [PRIMARY]
 GO
-
+INSERT [mule].[CBS_FT_DWP] ([BNK_ID], [CC_BNK_ID], [CCY], [CHRG_BEN], [CHRG_OUR], [CHRG_SHA], [CR_VALUE_DATE], [IBAN], [CLIENT_NO], [ACCT_TYPE], [ACCT_NO], [GL_CODE], [SETTLE_MTD], [RECEIVER], [BRANCH], [SEQ_NO], [PROFIT_CENTRE], [DWP_SEQ_NO], [TAG53_OPT], [TAG53_BIC], [TAG53_ACCOUNT], [TAG53_ADDRESS], [LIMIT_FROM], [LIMIT_TO]) VALUES (NULL, N'A1', N'GBP', N'Y', N'Y', N'Y', NULL, N'N', N'11704', N'N', NULL, N'1740010', N'F03', N'NWBKGB2L', N'HO', CAST(1 AS Numeric(2, 0)), N'BANK', 2059, N'B', NULL, N'60000148568910', NULL, NULL, NULL)
+GO
