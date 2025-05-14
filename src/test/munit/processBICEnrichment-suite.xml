@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:dbserver="http://www.mulesoft.org/schema/mule/dbserver"
+	xmlns:os="http://www.mulesoft.org/schema/mule/os" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd
+http://www.mulesoft.org/schema/mule/os http://www.mulesoft.org/schema/mule/os/current/mule-os.xsd
+http://www.mulesoft.org/schema/mule/dbserver http://www.mulesoft.org/schema/mule/dbserver/current/mule-dbserver.xsd">
+	<munit:config name="processBICEnrichment-suite.xml" />
+	<munit:test name="putBICData-create-test" doc:id="c44203f7-dfdd-4805-9e48-85b44018012d" description="Create a BIC enrichment record">
+		<munit:behavior >
+			<munit-tools:mock-when doc:name="Mock Call Stored procedure - sp_BIC_Enrichment" doc:id="a8379efd-1163-4b2c-aca8-0418aa3ab5b5" processor="db:stored-procedure">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="256796f9-9efe-4d85-bebc-7d9a562e8b30" attributeName="doc:id" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:payload value="#[output application/java  --- readUrl('classpath://putBICDatacreatetest\mock_payload.dwl', 'application/dw',{onlyData: true})]" mediaType="application/java " encoding="UTF-8" />
+					<munit-tools:variables >
+						<munit-tools:variable key="outboundHeaders" value="#[readUrl('classpath://putBICDatacreatetest\mock_variable_.dwl', 'application/dw',{onlyData: true})]" />
+						<munit-tools:variable key="vIntegrationId" value="#[output application/java --- readUrl('classpath://putBICDatacreatetest\mock_variable_1.dwl', 'application/dw',{onlyData: true})]" mediaType="application/java" encoding="UTF-8" />
+					</munit-tools:variables>
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+			<munit:set-event doc:name="Set Input" doc:id="d0f6b999-9ccf-4848-b709-84bb474f0678" >
+				<munit:payload value="#[output application/json  --- readUrl('classpath://putBICDatacreatetest\set-event_payload.dwl', 'application/dw',{onlyData: true})]" encoding="UTF-8" mediaType="application/json " />
+				<munit:attributes value="#[readUrl('classpath://putBICDatacreatetest\set-event_attributes.dwl', 'application/dw',{onlyData: true})]" />
+				<munit:variables >
+					<munit:variable key="outboundHeaders" value="#[readUrl('classpath://putBICDatacreatetest\set-event_variable_.dwl', 'application/dw',{onlyData: true})]" />
+					<munit:variable key="vIntegrationId" value="#[output application/java --- readUrl('classpath://putBICDatacreatetest\set-event_variable_1.dwl', 'application/dw',{onlyData: true})]" encoding="UTF-8" mediaType="application/java" />
+				</munit:variables>
+			</munit:set-event>
+		</munit:behavior>
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to putBICData" doc:id="51ea5b17-904d-4bbb-9519-df7301ed34de" name="putBICData"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert doc:name="Assert payload" doc:id="dd055fed-913f-4c65-a866-9df74e7f1834" message="The payload does not match">
+				<munit-tools:that ><![CDATA[#[%dw 2.0
+import putBICDatacreatetest::assert_expression_payload
+---
+assert_expression_payload::main({payload: payload, attributes: attributes, vars: vars})]]]></munit-tools:that>
+			</munit-tools:assert>
+		</munit:validation>
+	</munit:test>
+	<munit:test name="putBICData-update-test" doc:id="45efe940-f12c-4996-bc1d-52afda673ee1" description="Update a BIC enrichment record">
+		<munit:behavior >
+			<munit-tools:mock-when doc:name="Mock Call Stored procedure - sp_BIC_Enrichment" doc:id="86624fa2-8e3e-488e-9e9c-fbe88c4ab6e3" processor="db:stored-procedure">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="256796f9-9efe-4d85-bebc-7d9a562e8b30" attributeName="doc:id" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:payload value="#[output application/java  --- readUrl('classpath://putBICDataupdatetest\mock_payload.dwl', 'application/dw',{onlyData: true})]" mediaType="application/java " encoding="UTF-8" />
+					<munit-tools:variables >
+						<munit-tools:variable key="outboundHeaders" value="#[readUrl('classpath://putBICDataupdatetest\mock_variable_.dwl', 'application/dw',{onlyData: true})]" />
+						<munit-tools:variable key="vIntegrationId" value="#[output application/java --- readUrl('classpath://putBICDataupdatetest\mock_variable_1.dwl', 'application/dw',{onlyData: true})]" mediaType="application/java" encoding="UTF-8" />
+					</munit-tools:variables>
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+			<munit:set-event doc:name="Set Input" doc:id="128fd7b0-f456-47dc-81a6-d164d3d2dd59" >
+				<munit:payload value="#[output application/json  --- readUrl('classpath://putBICDataupdatetest\set-event_payload.dwl', 'application/dw',{onlyData: true})]" encoding="UTF-8" mediaType="application/json " />
+				<munit:attributes value="#[readUrl('classpath://putBICDataupdatetest\set-event_attributes.dwl', 'application/dw',{onlyData: true})]" />
+				<munit:variables >
+					<munit:variable key="outboundHeaders" value="#[readUrl('classpath://putBICDataupdatetest\set-event_variable_.dwl', 'application/dw',{onlyData: true})]" />
+					<munit:variable key="vIntegrationId" value="#[output application/java --- readUrl('classpath://putBICDataupdatetest\set-event_variable_1.dwl', 'application/dw',{onlyData: true})]" encoding="UTF-8" mediaType="application/java" />
+				</munit:variables>
+			</munit:set-event>
+		</munit:behavior>
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to putBICData" doc:id="dfa50cdf-42d6-4a5c-acef-f4f12d156a39" name="putBICData"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert doc:name="Assert payload" doc:id="34813e7b-a636-4441-8cda-cebe1ef4fdf3" message="The payload does not match">
+				<munit-tools:that ><![CDATA[#[%dw 2.0
+import putBICDataupdatetest::assert_expression_payload
+---
+assert_expression_payload::main({payload: payload, attributes: attributes, vars: vars})]]]></munit-tools:that>
+			</munit-tools:assert>
+		</munit:validation>
+	</munit:test>
+	<munit:test name="getBICData-Single-Record-Found-test" doc:id="7151e57a-a409-4007-a542-75bb9794abd9" description="Query existing record - record found">
+		<munit:behavior >
+			<munit-tools:mock-when doc:name="Mock Call Stored procedure - sp_BIC_Enrichment" doc:id="b637ac8c-2d5d-4e6e-9f69-2a4f7c9ed8e7" processor="db:stored-procedure">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="dd993a97-e7ba-4126-8103-bd49fd27692a" attributeName="doc:id" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:payload value="#[output application/java  --- readUrl('classpath://getBICDatarecordfoundtest\mock_payload.dwl', 'application/dw',{onlyData: true})]" mediaType="application/java " encoding="UTF-8" />
+					<munit-tools:variables >
+						<munit-tools:variable key="outboundHeaders" value="#[readUrl('classpath://getBICDatarecordfoundtest\mock_variable_.dwl', 'application/dw',{onlyData: true})]" />
+						<munit-tools:variable key="vBnkId" value="#[output application/java --- readUrl('classpath://getBICDatarecordfoundtest\mock_variable_1.dwl', 'application/dw',{onlyData: true})]" mediaType="application/java" encoding="UTF-8" />
+						<munit-tools:variable key="vIntegrationId" value="#[output application/java --- readUrl('classpath://getBICDatarecordfoundtest\mock_variable_2.dwl', 'application/dw',{onlyData: true})]" mediaType="application/java" encoding="UTF-8" />
+					</munit-tools:variables>
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+			<munit:set-event doc:name="Set Input" doc:id="22df71b7-b7f8-46a9-b28e-52f864bc6038" >
+				<munit:payload value="#[readUrl('classpath://getBICDatarecordfoundtest\set-event_payload.dwl', 'application/dw',{onlyData: true})]" encoding="UTF-8" />
+				<munit:attributes value="#[readUrl('classpath://getBICDatarecordfoundtest\set-event_attributes.dwl', 'application/dw',{onlyData: true})]" />
+				<munit:variables >
+					<munit:variable key="outboundHeaders" value="#[readUrl('classpath://getBICDatarecordfoundtest\set-event_variable_.dwl', 'application/dw',{onlyData: true})]" />
+					<munit:variable key="vBnkId" value="#[output application/java --- readUrl('classpath://getBICDatarecordfoundtest\set-event_variable_1.dwl', 'application/dw',{onlyData: true})]" encoding="UTF-8" mediaType="application/java" />
+					<munit:variable key="vIntegrationId" value="#[output application/java --- readUrl('classpath://getBICDatarecordfoundtest\set-event_variable_2.dwl', 'application/dw',{onlyData: true})]" encoding="UTF-8" mediaType="application/java" />
+				</munit:variables>
+			</munit:set-event>
+		</munit:behavior>
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to getBICData" doc:id="8fe3608e-c0c4-4523-8d13-d1fc188a1462" name="getBICData"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert doc:name="Assert payload" doc:id="96f2e705-ab1b-4034-9ec1-459bda12bef9" message="The payload does not match">
+				<munit-tools:that ><![CDATA[#[%dw 2.0
+import getBICDatarecordfoundtest::assert_expression_payload
+---
+assert_expression_payload::main({payload: payload, attributes: attributes, vars: vars})]]]></munit-tools:that>
+			</munit-tools:assert>
+		</munit:validation>
+	</munit:test>
+	<munit:test name="getBICData-record-not-found-test" doc:id="962c1c83-3e90-4b10-8449-75f9ce920bee" >
+		<munit:behavior >
+			<munit-tools:mock-when doc:name="Mock Call Stored procedure - sp_BIC_Enrichment" doc:id="b61515da-fee9-49ef-9a61-e3dd5993d0b8" processor="db:stored-procedure">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="dd993a97-e7ba-4126-8103-bd49fd27692a" attributeName="doc:id" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:payload value="#[output application/java  --- readUrl('classpath://getBICDatarecordnotfoundtest\mock_payload.dwl', 'application/dw',{onlyData: true})]" mediaType="application/java " encoding="UTF-8" />
+					<munit-tools:variables >
+						<munit-tools:variable key="outboundHeaders" value="#[readUrl('classpath://getBICDatarecordnotfoundtest\mock_variable_.dwl', 'application/dw',{onlyData: true})]" />
+						<munit-tools:variable key="vBnkId" value="#[output application/java --- readUrl('classpath://getBICDatarecordnotfoundtest\mock_variable_1.dwl', 'application/dw',{onlyData: true})]" mediaType="application/java" encoding="UTF-8" />
+						<munit-tools:variable key="vIntegrationId" value="#[output application/java --- readUrl('classpath://getBICDatarecordnotfoundtest\mock_variable_2.dwl', 'application/dw',{onlyData: true})]" mediaType="application/java" encoding="UTF-8" />
+					</munit-tools:variables>
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+			<munit:set-event doc:name="Set Input" doc:id="5c9326be-81bd-49bf-b54d-a579d67b5e35" >
+				<munit:payload value="#[readUrl('classpath://getBICDatarecordnotfoundtest\set-event_payload.dwl', 'application/dw',{onlyData: true})]" encoding="UTF-8" />
+				<munit:attributes value="#[readUrl('classpath://getBICDatarecordnotfoundtest\set-event_attributes.dwl', 'application/dw',{onlyData: true})]" />
+				<munit:variables >
+					<munit:variable key="outboundHeaders" value="#[readUrl('classpath://getBICDatarecordnotfoundtest\set-event_variable_.dwl', 'application/dw',{onlyData: true})]" />
+					<munit:variable key="vBnkId" value="#[output application/java --- readUrl('classpath://getBICDatarecordnotfoundtest\set-event_variable_1.dwl', 'application/dw',{onlyData: true})]" encoding="UTF-8" mediaType="application/java" />
+					<munit:variable key="vIntegrationId" value="#[output application/java --- readUrl('classpath://getBICDatarecordnotfoundtest\set-event_variable_2.dwl', 'application/dw',{onlyData: true})]" encoding="UTF-8" mediaType="application/java" />
+				</munit:variables>
+			</munit:set-event>
+		</munit:behavior>
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to getBICData" doc:id="cee31d1b-edf4-4ae4-8a5f-f3a99a192c45" name="getBICData"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert doc:name="Assert payload" doc:id="bbc71d5a-6732-4d37-9457-497ee39eb651" message="The payload does not match">
+				<munit-tools:that ><![CDATA[#[%dw 2.0
+import getBICDatarecordnotfoundtest::assert_expression_payload
+---
+assert_expression_payload::main({payload: payload, attributes: attributes, vars: vars})]]]></munit-tools:that>
+			</munit-tools:assert>
+		</munit:validation>
+	</munit:test>
+	<munit:test name="deleteBICData-record-deleted-test" doc:id="38e0588c-cd92-4fa5-8eb5-917eef1e3410" >
+		<munit:behavior >
+			<munit-tools:mock-when doc:name="Mock Call Stored procedure - sp_BIC_Enrichment" doc:id="a65c69f9-ebcc-445f-8958-37787ecf1506" processor="db:stored-procedure">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="089c5205-6c54-449a-a557-2d2a85980099" attributeName="doc:id" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:payload value="#[output application/java  --- readUrl('classpath://deleteBICDatarecorddeletedtest\mock_payload.dwl', 'application/dw',{onlyData: true})]" mediaType="application/java " encoding="UTF-8" />
+					<munit-tools:variables >
+						<munit-tools:variable key="outboundHeaders" value="#[readUrl('classpath://deleteBICDatarecorddeletedtest\mock_variable_.dwl', 'application/dw',{onlyData: true})]" />
+						<munit-tools:variable key="vBnkId" value="#[output application/java --- readUrl('classpath://deleteBICDatarecorddeletedtest\mock_variable_1.dwl', 'application/dw',{onlyData: true})]" mediaType="application/java" encoding="UTF-8" />
+						<munit-tools:variable key="vIntegrationId" value="#[output application/java --- readUrl('classpath://deleteBICDatarecorddeletedtest\mock_variable_2.dwl', 'application/dw',{onlyData: true})]" mediaType="application/java" encoding="UTF-8" />
+					</munit-tools:variables>
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+			<munit:set-event doc:name="Set Input" doc:id="d3e3699e-5c51-40fc-a56a-778d37f091e6" >
+				<munit:payload value="#[readUrl('classpath://deleteBICDatarecorddeletedtest\set-event_payload.dwl', 'application/dw',{onlyData: true})]" encoding="UTF-8" />
+				<munit:attributes value="#[readUrl('classpath://deleteBICDatarecorddeletedtest\set-event_attributes.dwl', 'application/dw',{onlyData: true})]" />
+				<munit:variables >
+					<munit:variable key="outboundHeaders" value="#[readUrl('classpath://deleteBICDatarecorddeletedtest\set-event_variable_.dwl', 'application/dw',{onlyData: true})]" />
+					<munit:variable key="vBnkId" value="#[output application/java --- readUrl('classpath://deleteBICDatarecorddeletedtest\set-event_variable_1.dwl', 'application/dw',{onlyData: true})]" encoding="UTF-8" mediaType="application/java" />
+					<munit:variable key="vIntegrationId" value="#[output application/java --- readUrl('classpath://deleteBICDatarecorddeletedtest\set-event_variable_2.dwl', 'application/dw',{onlyData: true})]" encoding="UTF-8" mediaType="application/java" />
+				</munit:variables>
+			</munit:set-event>
+		</munit:behavior>
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to deleteBICData" doc:id="c6490337-b6cf-4f3e-86ff-3763c9af0381" name="deleteBICData"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert doc:name="Assert payload" doc:id="ee40486e-5db9-40ea-ad07-b3e72c7d7c2b" message="The payload does not match">
+				<munit-tools:that ><![CDATA[#[%dw 2.0
+import deleteBICDatarecorddeletedtest::assert_expression_payload
+---
+assert_expression_payload::main({payload: payload, attributes: attributes, vars: vars})]]]></munit-tools:that>
+			</munit-tools:assert>
+		</munit:validation>
+	</munit:test>
+	<munit:test name="deleteBICData-record-not-found-test" doc:id="8e5fd179-1dc5-46f7-856f-f05be00679e5" >
+		<munit:behavior >
+			<munit-tools:mock-when doc:name="Mock Call Stored procedure - sp_BIC_Enrichment" doc:id="fa0d411e-5adf-43cb-8cdb-0da2a3be1180" processor="db:stored-procedure">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="089c5205-6c54-449a-a557-2d2a85980099" attributeName="doc:id" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:payload value="#[output application/java  --- readUrl('classpath://deleteBICDatarecordnotfoundtest\mock_payload.dwl', 'application/dw',{onlyData: true})]" mediaType="application/java " encoding="UTF-8" />
+					<munit-tools:variables >
+						<munit-tools:variable key="outboundHeaders" value="#[readUrl('classpath://deleteBICDatarecordnotfoundtest\mock_variable_.dwl', 'application/dw',{onlyData: true})]" />
+						<munit-tools:variable key="vBnkId" value="#[output application/java --- readUrl('classpath://deleteBICDatarecordnotfoundtest\mock_variable_1.dwl', 'application/dw',{onlyData: true})]" mediaType="application/java" encoding="UTF-8" />
+						<munit-tools:variable key="vIntegrationId" value="#[output application/java --- readUrl('classpath://deleteBICDatarecordnotfoundtest\mock_variable_2.dwl', 'application/dw',{onlyData: true})]" mediaType="application/java" encoding="UTF-8" />
+					</munit-tools:variables>
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+			<munit:set-event doc:name="Set Input" doc:id="2c9f19db-972a-4566-b8d5-d3ed922154d4" >
+				<munit:payload value="#[readUrl('classpath://deleteBICDatarecordnotfoundtest\set-event_payload.dwl', 'application/dw',{onlyData: true})]" encoding="UTF-8" />
+				<munit:attributes value="#[readUrl('classpath://deleteBICDatarecordnotfoundtest\set-event_attributes.dwl', 'application/dw',{onlyData: true})]" />
+				<munit:variables >
+					<munit:variable key="outboundHeaders" value="#[readUrl('classpath://deleteBICDatarecordnotfoundtest\set-event_variable_.dwl', 'application/dw',{onlyData: true})]" />
+					<munit:variable key="vBnkId" value="#[output application/java --- readUrl('classpath://deleteBICDatarecordnotfoundtest\set-event_variable_1.dwl', 'application/dw',{onlyData: true})]" encoding="UTF-8" mediaType="application/java" />
+					<munit:variable key="vIntegrationId" value="#[output application/java --- readUrl('classpath://deleteBICDatarecordnotfoundtest\set-event_variable_2.dwl', 'application/dw',{onlyData: true})]" encoding="UTF-8" mediaType="application/java" />
+				</munit:variables>
+			</munit:set-event>
+		</munit:behavior>
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to deleteBICData" doc:id="abfac15b-692d-4c0e-8daa-15587f694348" name="deleteBICData"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert doc:name="Assert payload" doc:id="4f08b5d1-7f5a-4e41-89f2-60ddcec40162" message="The payload does not match">
+				<munit-tools:that ><![CDATA[#[%dw 2.0
+import deleteBICDatarecordnotfoundtest::assert_expression_payload
+---
+assert_expression_payload::main({payload: payload, attributes: attributes, vars: vars})]]]></munit-tools:that>
+			</munit-tools:assert>
+		</munit:validation>
+	</munit:test>
+	<munit:test name="getBICData-All-BICs-test" doc:id="1e81e241-2c29-47b9-b17b-1e0e7f0f1bd2" >
+		<munit:behavior >
+			<munit-tools:mock-when doc:name="Mock Call Stored procedure - sp_BIC_Enrichment" doc:id="04187a37-02b0-4da2-85d2-89987eb0fb3e" processor="db:stored-procedure">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="dd993a97-e7ba-4126-8103-bd49fd27692a" attributeName="doc:id" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:payload value="#[output application/java  --- readUrl('classpath://getBICDataAllBICs\mock_payload.dwl')]" mediaType="application/java " encoding="UTF-8" />
+					<munit-tools:variables >
+						<munit-tools:variable key="outboundHeaders" value="#[readUrl('classpath://getBICDataAllBICs\mock_variable_.dwl')]" />
+						<munit-tools:variable key="vBnkId" value="#[output application/java --- readUrl('classpath://getBICDataAllBICs\mock_variable_1.dwl')]" mediaType="application/java" encoding="UTF-8" />
+						<munit-tools:variable key="vIntegrationId" value="#[output application/java --- readUrl('classpath://getBICDataAllBICs\mock_variable_2.dwl')]" mediaType="application/java" encoding="UTF-8" />
+					</munit-tools:variables>
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+			<munit:set-event doc:name="Set Input" doc:id="4b47b88e-8583-4062-95d2-b186e65b840d" >
+				<munit:payload value="#[output application/java  --- readUrl('classpath://getBICDataAllBICs\set-event_payload.dwl')]" encoding="UTF-8" mediaType="application/java " />
+				<munit:attributes value="#[readUrl('classpath://getBICDataAllBICs\set-event_attributes.dwl')]" />
+				<munit:variables >
+					<munit:variable key="outboundHeaders" value="#[readUrl('classpath://getBICDataAllBICs\set-event_variable_.dwl')]" />
+					<munit:variable key="vBnkId" value="#[output application/java --- readUrl('classpath://getBICDataAllBICs\set-event_variable_1.dwl')]" encoding="UTF-8" mediaType="application/java" />
+					<munit:variable key="vIntegrationId" value="#[output application/java --- readUrl('classpath://getBICDataAllBICs\set-event_variable_2.dwl')]" encoding="UTF-8" mediaType="application/java" />
+				</munit:variables>
+			</munit:set-event>
+		</munit:behavior>
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to getBICData" doc:id="80ffebbc-1751-4f55-a4b6-ecbc3b873ebe" name="getBICData"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert doc:name="Assert payload" doc:id="7348ae93-ed66-4296-8144-c908fc1e0889" message="The payload does not match">
+				<munit-tools:that ><![CDATA[#[%dw 2.0
+import getBICDataAllBICs::assert_expression_payload
+---
+assert_expression_payload::main({payload: payload, attributes: attributes, vars: vars})]]]></munit-tools:that>
+			</munit-tools:assert>
+		</munit:validation>
+	</munit:test>
+
+
+</mule>

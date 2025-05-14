@@ -1,0 +1,21 @@
+{
+  "swiftUETR": "265c245f-2682-4291-9999-2a41e530cd36",
+  "swiftMessage": "{1:F01CRASGB2LAXXX2971124032}{2:O1031434190323BA.....}", 
+  "masterID": "121265c245f", 
+  "bulkID": "121265c245f", 
+  "fileID": "2a41e530cd36",
+  "messageTimestamp": "2016-08-29T09:12:33.001Z", 
+  "originalMsg":"{1:F01CRASGB2LAXXX2971124032}{2:O1031434190323BA.....}",
+  "messageType": "103",
+  "messageDirection": "O",
+  "correlationId": "66dd54d0-7734-11ee-a743-06dff6cfdd86",
+  "integrationId": "a4b0aa65-1da4-47a6-a0ea-12fbebd9cc5d",     
+  "api": "papi-payment-iso-20022",         
+  "cbsReference": "20230013210",   
+  "detectionId": "7642902",     
+  "payload": {"id": "265c245f-2682-4291-ad67-2a41e530cd36", "message": "{1:F01CRASGB2LAXXX2971124032}{2:O1031434190323BA.....}" },
+  "attributes": {"x-correlation-id": "66dd54d0-7734-11ee-a743-06dff6cfdd86"},
+  "dealReference": "7642902",     
+  "queueName": "QUEUE.BTLPAYMENT.ISO",
+  "sendersReference": "F50F59TEST" 
+}

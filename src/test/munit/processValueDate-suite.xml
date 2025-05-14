@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:dbserver="http://www.mulesoft.org/schema/mule/dbserver"
+	xmlns:os="http://www.mulesoft.org/schema/mule/os" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd
+http://www.mulesoft.org/schema/mule/os http://www.mulesoft.org/schema/mule/os/current/mule-os.xsd
+http://www.mulesoft.org/schema/mule/dbserver http://www.mulesoft.org/schema/mule/dbserver/current/mule-dbserver.xsd">
+	<munit:config name="processBICEnrichment-suite.xml" />
+	<munit:test name="getValueDate_holiday" doc:id="7151e57a-a409-4007-a542-75bb9794abd9" description="Query existing record - record">
+		<munit:enable-flow-sources >
+			<munit:enable-flow-source value="getValueDate" />
+		</munit:enable-flow-sources>
+		<munit:behavior >
+			<munit:set-event doc:name="Set API Query Params" doc:id="22df71b7-b7f8-46a9-b28e-52f864bc6038">
+				<munit:payload value='#[""]' encoding="UTF-8" />
+				<munit:attributes value='#[output application/json&#10;---&#10;{&#10;	"queryParams": {&#10;		"valueDate": "2024-10-24",&#10;		"ccy": "GBP"&#10;	}&#10;}]' mediaType="application/json" />
+			</munit:set-event>
+			<munit-tools:mock-when doc:name="Mock Call Stored procedure - sp_getValueDate" doc:id="b637ac8c-2d5d-4e6e-9f69-2a4f7c9ed8e7" processor="db:stored-procedure">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="Call Stored procedure - sp_getValueDate" attributeName="doc:name" />
+					<munit-tools:with-attribute whereValue="ea943754-ad76-4c4c-ac1c-cf67d81dba7f" attributeName="doc:id" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:payload value='#[output application/java  &#10;---&#10;{"resultSet1": [&#10;	{&#10;	  "result": "2024-10-24"&#10;	}]&#10;}]' mediaType="application/java " encoding="UTF-8" />
+					<munit-tools:attributes value='#[output application/json  &#10;--- {&#10;	"statusCode": 404&#10;}]' mediaType="application/json" />
+					<munit-tools:variables >
+						<munit-tools:variable key="vData" value='#[("2024-10-24" as Date)]' mediaType="application/java" encoding="UTF-8" />
+					</munit-tools:variables>
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+		</munit:behavior>
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to get:\value-date:sapi-reference-data-config" doc:id="8fe3608e-c0c4-4523-8d13-d1fc188a1462" name="get:\value-date:sapi-reference-data-config"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert doc:name="Assert payload response is the same date" doc:id="96f2e705-ab1b-4034-9ec1-459bda12bef9" message="The payload does not match">
+				<munit-tools:that ><![CDATA[#[%dw 2.0
+import * from dw::test::Asserts
+---
+payload must equalTo({
+  "result": "2024-10-24"
+})]]]></munit-tools:that>
+			</munit-tools:assert>
+			<munit-tools:assert-that doc:name="Assert that" doc:id="7105ba40-8591-4b50-94e8-b5667e8f30ad" message="Expected HTTP Status 200 not received" expression="#[vars.httpStatus]" is="#[MunitTools::equalTo(200)]" />
+		</munit:validation>
+	</munit:test>
+</mule>

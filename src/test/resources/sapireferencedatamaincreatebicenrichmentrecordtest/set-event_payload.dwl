@@ -1,0 +1,6 @@
+{
+  "BNK_ID": "UNCFUS33XXX",
+  "REPLACEMENT_BNK_ID": "MISYGB2LXXX",
+  "FUND_NAME": "UNICEF",
+  "DESCRIPTION": "United Nations Childrens Fund"
+}
