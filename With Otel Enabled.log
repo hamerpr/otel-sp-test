@@ -1,0 +1,561 @@
+2025-05-14 12:42:30.845 INFO    com.mulesoft.ch.queue.boot.PersistentQueueCoreExtension [qtp1868324932-39]: The PersistentQueueManager is NOT configured. The normal VM queue manager will be used.
+2025-05-14 12:42:35.861 WARN    org.mule.runtime.ast.internal.serialization.dto.ComponentAstDTO [qtp1868324932-39]: Enrichment: resolveInfrastructureModel - NO MODEL RESOLVED!: INFRASTRUCTURE - Reconnection
+2025-05-14 12:42:35.871 WARN    org.mule.runtime.ast.internal.serialization.dto.ComponentAstDTO [qtp1868324932-39]: Enrichment: resolveInfrastructureModel - NO MODEL RESOLVED!: INFRASTRUCTURE - reconnect-forever
+2025-05-14 12:42:35.925 WARN    org.mule.runtime.module.deployment.internal.processor.FallbackArtifactConfigurationProcessor [qtp1868324932-39]: Falling back to org.mule.runtime.module.deployment.internal.processor.AstXmlParserArtifactConfigurationProcessor@6abae77a for deployment otel-sp-test: org.mule.runtime.core.api.config.ConfigurationException: Could not resolve ParameterModel for [ref]
+2025-05-14 12:42:40.512 INFO    org.mule.runtime.api.el.AbstractBindingContextBuilderFactory [qtp1868324932-39]: Loaded BindingContextBuilderFactory implementation 'org.mule.runtime.core.api.el.DefaultBindingContextBuilderFactory' from classloader 'java.net.URLClassLoader@4ea49c9d'
+2025-05-14 12:42:49.938 INFO    org.mule.runtime.api.message.AbstractMuleMessageBuilderFactory [qtp1868324932-39]: Loaded MuleMessageBuilderFactory implementation 'org.mule.runtime.core.internal.message.DefaultMessageBuilderFactory' from classloader 'java.net.URLClassLoader@4ea49c9d'
+2025-05-14 12:42:58.130 INFO    org.mule.runtime.core.internal.util.journal.TransactionJournal [qtp1868324932-39]: Using files for tx logs /opt/mule/mule-4.6-java8/./.mule/otel-sp-test/queue-tx-log/tx1.log and /opt/mule/mule-4.6-java8/./.mule/otel-sp-test/queue-tx-log/tx2.log
+2025-05-14 12:42:58.169 INFO    org.mule.runtime.core.internal.util.journal.TransactionJournal [qtp1868324932-39]: Using files for tx logs /opt/mule/mule-4.6-java8/./.mule/otel-sp-test/queue-xa-tx-log/tx1.log and /opt/mule/mule-4.6-java8/./.mule/otel-sp-test/queue-xa-tx-log/tx2.log
+2025-05-14 12:42:58.884 INFO    org.mule.runtime.core.privileged.lifecycle.AbstractLifecycleManager [qtp1868324932-39]: Initialising Bean: org.mule.runtime.module.extension.internal.runtime.config.StaticConfigurationProvider-Ref_DB_Database_AWS_Config
+2025-05-14 12:42:59.646 INFO    com.mchange.v2.log.MLog [MLog-Init-Reporter]: MLog clients using slf4j logging.
+2025-05-14 12:42:59.859 INFO    com.mchange.v2.c3p0.C3P0Registry [qtp1868324932-39]: Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2025-05-14 12:43:00.244 INFO    org.mule.runtime.core.privileged.lifecycle.AbstractLifecycleManager [qtp1868324932-39]: Initialising Bean: org.mule.runtime.module.extension.internal.runtime.config.StaticConfigurationProvider-OpenTelemetry_Config_OTLP
+2025-05-14 12:43:00.473 INFO    org.mule.runtime.core.internal.construct.FlowConstructLifecycleManager [qtp1868324932-39]: Initialising flow: get:\dwp:sapi-reference-data-config
+2025-05-14 12:43:00.802 INFO    org.mule.runtime.core.internal.construct.FlowConstructLifecycleManager [qtp1868324932-39]: Initialising flow: errorhandler
+2025-05-14 12:43:01.820 INFO    org.mule.runtime.core.internal.construct.FlowConstructLifecycleManager [qtp1868324932-39]: Initialising flow: sapi-reference-data-main
+2025-05-14 12:43:03.636 INFO    com.mulesoft.ch.batch.BatchCoreExtension [qtp1868324932-39]: Persistent queues is not enabled for batch module as it was not configured in Cloudhub console
+2025-05-14 12:43:03.775 INFO    org.mule.runtime.core.internal.util.queue.QueueXaResourceManager [ArtifactDeployer.start.01]: Starting ResourceManager
+2025-05-14 12:43:03.776 INFO    org.mule.runtime.core.internal.util.queue.QueueXaResourceManager [ArtifactDeployer.start.01]: Started ResourceManager
+2025-05-14 12:43:03.791 INFO    org.mule.runtime.core.privileged.lifecycle.AbstractLifecycleManager [ArtifactDeployer.start.01]: Starting Bean: org.mule.runtime.module.extension.internal.runtime.config.StaticConfigurationProvider-Ref_DB_Database_AWS_Config
+2025-05-14 12:43:03.877 INFO    com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource [[MuleRuntime].uber.02: [otel-sp-test].uber@org.mule.runtime.core.internal.connection.DefaultConnectivityTesterFactory$1.testConnectivity:102 @39f72fa8]: Initializing c3p0 pool... com.mchange.v2.c3p0.PoolBackedDataSource@9637af5f [ connectionPoolDataSource -> com.mchange.v2.c3p0.WrapperConnectionPoolDataSource@74328c49 [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 10000, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, debugUnreturnedConnectionStackTraces -> false, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, identityToken -> 2uhlyoba1ldv398ztcyge|5513d146, idleConnectionTestPeriod -> 0, initialPoolSize -> 15, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 5, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 25, maxStatements -> 0, maxStatementsPerConnection -> 5, minPoolSize -> 15, nestedDataSource -> StandardDataSource:
+     driver=<null>
+     url=<jdbc:sqlserver://cab-test-mulesoftbridge-db.c51x0u8xgvqi.eu-west-2.rds.amazonaws.com;databaseName=MuleSoftBridge>
+     user=<repdb_mulesoft>
+CoreDataSource :
+     debug =<false>
+     description =<null>
+     login time out =<60>
+     user =<repdb_mulesoft>
+     verbose =<false>
+, preferredTestQuery -> null, privilegeSpawnedThreads -> false, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false; userOverrides: {} ], dataSourceName -> null, extensions -> {}, factoryClassLocation -> null, identityToken -> 2uhlyoba1ldv398ztcyge|4ef97053, numHelperThreads -> 3 ]
+2025-05-14 12:43:04.455 INFO    org.mule.runtime.core.privileged.lifecycle.AbstractLifecycleManager [ArtifactDeployer.start.01]: Starting Bean: org.mule.runtime.module.extension.internal.runtime.config.StaticConfigurationProvider-OpenTelemetry_Config_OTLP
+2025-05-14 12:43:04.456 INFO    com.avioconsulting.mule.opentelemetry.internal.config.OpenTelemetryExtensionConfiguration [ArtifactDeployer.start.01]: Initiating otel config - 'OpenTelemetry_Config_OTLP'
+2025-05-14 12:43:05.071 INFO    com.avioconsulting.mule.opentelemetry.internal.connection.OpenTelemetryConnection [ArtifactDeployer.start.01]: Initialising OpenTelemetry Mule 4 Agent for instrumentation mule-opentelemetry-module:2.9.2
+2025-05-14 12:43:05.995 WARN    com.avioconsulting.mule.opentelemetry.internal.connection.OpenTelemetryConnection [ArtifactDeployer.start.01]: OpenTelemetry Log4j support not found on the classpath. Logs will not be exported via OpenTelemetry.
+2025-05-14 12:43:05.996 INFO    com.avioconsulting.mule.opentelemetry.internal.connection.OpenTelemetryConnection [ArtifactDeployer.start.01]: Disabling loaded Metrics Providers
+2025-05-14 12:43:06.027 INFO    com.avioconsulting.mule.opentelemetry.internal.config.OpenTelemetryExtensionConfiguration [ArtifactDeployer.start.01]: Metrics has been turned off. No listener will be registered.
+2025-05-14 12:43:06.031 INFO    org.mule.runtime.core.internal.construct.FlowConstructLifecycleManager [ArtifactDeployer.start.01]: Starting flow: sapi-reference-data-main
+2025-05-14 12:43:06.670 INFO    org.mule.runtime.core.internal.construct.FlowConstructLifecycleManager [ArtifactDeployer.start.01]: Starting flow: get:\dwp:sapi-reference-data-config
+2025-05-14 12:43:06.719 INFO    org.mule.runtime.core.internal.construct.FlowConstructLifecycleManager [ArtifactDeployer.start.01]: Starting flow: errorhandler
+2025-05-14 12:43:06.806 INFO    com.mulesoft.agent.services.application.AgentApplicationService [ArtifactDeployer.start.01]: Loading application configuration from fragment: mule.agent.application.properties.service
+2025-05-14 12:43:06.834 INFO    com.mulesoft.agent.services.administration.components.ComponentManager [ArtifactDeployer.start.01]: Re-enabling component: mule.agent.application.properties.service
+2025-05-14 12:43:06.840 INFO    org.mule.runtime.core.internal.logging.LogUtil [ArtifactDeployer.start.01]: 
+**********************************************************************
+* Application: otel-sp-test                                          *
+* OS encoding: UTF-8, Mule encoding: UTF-8                           *
+*                                                                    *
+**********************************************************************
+2025-05-14 12:46:18.841 INFO    com.mulesoft.objectstore.cloud.api.PartitioningObjectStoreManager [[MuleRuntime].uber.02: [otel-sp-test].sapi-reference-data-main.CPU_INTENSIVE @50212921]: event:6e06b4c0-30c1-11f0-b958-067763caecfd No local object store defined for the given setting LoggerObjectStore. Using Cloud Object Store.
+2025-05-14 12:46:18.843 INFO    com.mulesoft.objectstore.cloud.api.PartitioningObjectStoreManager [[MuleRuntime].uber.02: [otel-sp-test].sapi-reference-data-main.CPU_INTENSIVE @50212921]: event:6e06b4c0-30c1-11f0-b958-067763caecfd No local object store defined for the given setting LoggerObjectStore. Using Cloud Object Store.
+2025-05-14 12:46:18.923 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.02: [otel-sp-test].sapi-reference-data-main.CPU_INTENSIVE @50212921]: event:6e06b4c0-30c1-11f0-b958-067763caecfd {"integrationId":"ebb6cd87-5c80-4082-901e-0f236d046fdf","logStep":"SERVICE_START","requestId":"ebb6cd87-5c80-4082-901e-0f236d046fdf","correlationId":"6e06b4c0-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/3:36","logTimeStamp":"2025-05-14T12:46:18.837+0000","statusMessage":"SUCCESS","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":0,"environment":"sit"}
+2025-05-14 12:46:19.769 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].get:\dwp:sapi-reference-data-config.CPU_INTENSIVE @45e86774]: event:6e06b4c0-30c1-11f0-b958-067763caecfd {"integrationId":"ebb6cd87-5c80-4082-901e-0f236d046fdf","logStep":"SERVICE_END","requestId":"ebb6cd87-5c80-4082-901e-0f236d046fdf","correlationId":"6e06b4c0-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/5:38","logTimeStamp":"2025-05-14T12:46:19.755+0000","statusCode":"200","statusMessage":"OK","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"payload":"[\n  {\n    \"CLIENT_NO\": \"11704\",\n    \"LIMIT_TO\": null,\n    \"LIMIT_FROM\": null,\n    \"DWP_SEQ_NO\": 2059,\n    \"TAG53_BIC\": null,\n    \"CCY\": \"GBP\",\n    \"TAG53_ACCOUNT\": \"60000148568910\",\n    \"TAG53_ADDRESS\": null,\n    \"TAG53_OPT\": \"B\"\n  }\n]","attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":918,"environment":"sit"}
+2025-05-14 12:46:20.796 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].sapi-reference-data-main.CPU_INTENSIVE @50212921]: event:6f9c6ff0-30c1-11f0-b958-067763caecfd {"integrationId":"9d6c6f4e-aa1b-498d-a297-43aa232c1031","logStep":"SERVICE_START","requestId":"9d6c6f4e-aa1b-498d-a297-43aa232c1031","correlationId":"6f9c6ff0-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/3:36","logTimeStamp":"2025-05-14T12:46:20.795+0000","statusMessage":"SUCCESS","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":0,"environment":"sit"}
+2025-05-14 12:46:20.853 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].get:\dwp:sapi-reference-data-config.CPU_INTENSIVE @45e86774]: event:6f9c6ff0-30c1-11f0-b958-067763caecfd {"integrationId":"9d6c6f4e-aa1b-498d-a297-43aa232c1031","logStep":"SERVICE_END","requestId":"9d6c6f4e-aa1b-498d-a297-43aa232c1031","correlationId":"6f9c6ff0-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/5:38","logTimeStamp":"2025-05-14T12:46:20.853+0000","statusCode":"200","statusMessage":"OK","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"payload":"[\n  {\n    \"CLIENT_NO\": \"11704\",\n    \"LIMIT_TO\": null,\n    \"LIMIT_FROM\": null,\n    \"DWP_SEQ_NO\": 2059,\n    \"TAG53_BIC\": null,\n    \"CCY\": \"GBP\",\n    \"TAG53_ACCOUNT\": \"60000148568910\",\n    \"TAG53_ADDRESS\": null,\n    \"TAG53_OPT\": \"B\"\n  }\n]","attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":58,"environment":"sit"}
+2025-05-14 12:46:27.896 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].sapi-reference-data-main.CPU_INTENSIVE @50212921]: event:73d7cfb0-30c1-11f0-b958-067763caecfd {"integrationId":"34f23173-f242-4c80-a62a-16e81f0fd690","logStep":"SERVICE_START","requestId":"34f23173-f242-4c80-a62a-16e81f0fd690","correlationId":"73d7cfb0-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/3:36","logTimeStamp":"2025-05-14T12:46:27.895+0000","statusMessage":"SUCCESS","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":0,"environment":"sit"}
+2025-05-14 12:46:27.950 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.01: [otel-sp-test].get:\dwp:sapi-reference-data-config.CPU_INTENSIVE @45e86774]: event:73d7cfb0-30c1-11f0-b958-067763caecfd {"integrationId":"34f23173-f242-4c80-a62a-16e81f0fd690","logStep":"SERVICE_END","requestId":"34f23173-f242-4c80-a62a-16e81f0fd690","correlationId":"73d7cfb0-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/5:38","logTimeStamp":"2025-05-14T12:46:27.949+0000","statusCode":"200","statusMessage":"OK","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"payload":"[\n  {\n    \"CLIENT_NO\": \"11704\",\n    \"LIMIT_TO\": null,\n    \"LIMIT_FROM\": null,\n    \"DWP_SEQ_NO\": 2059,\n    \"TAG53_BIC\": null,\n    \"CCY\": \"GBP\",\n    \"TAG53_ACCOUNT\": \"60000148568910\",\n    \"TAG53_ADDRESS\": null,\n    \"TAG53_OPT\": \"B\"\n  }\n]","attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":54,"environment":"sit"}
+2025-05-14 12:46:30.281 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.01: [otel-sp-test].sapi-reference-data-main.CPU_INTENSIVE @50212921]: event:75436da0-30c1-11f0-b958-067763caecfd {"integrationId":"45eb8be3-5e8b-49ef-82eb-15a086c7285c","logStep":"SERVICE_START","requestId":"45eb8be3-5e8b-49ef-82eb-15a086c7285c","correlationId":"75436da0-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/3:36","logTimeStamp":"2025-05-14T12:46:30.281+0000","statusMessage":"SUCCESS","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":0,"environment":"sit"}
+2025-05-14 12:46:30.386 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].get:\dwp:sapi-reference-data-config.CPU_INTENSIVE @45e86774]: event:75436da0-30c1-11f0-b958-067763caecfd {"integrationId":"45eb8be3-5e8b-49ef-82eb-15a086c7285c","logStep":"SERVICE_END","requestId":"45eb8be3-5e8b-49ef-82eb-15a086c7285c","correlationId":"75436da0-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/5:38","logTimeStamp":"2025-05-14T12:46:30.385+0000","statusCode":"200","statusMessage":"OK","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"payload":"[\n  {\n    \"CLIENT_NO\": \"11704\",\n    \"LIMIT_TO\": null,\n    \"LIMIT_FROM\": null,\n    \"DWP_SEQ_NO\": 2059,\n    \"TAG53_BIC\": null,\n    \"CCY\": \"GBP\",\n    \"TAG53_ACCOUNT\": \"60000148568910\",\n    \"TAG53_ADDRESS\": null,\n    \"TAG53_OPT\": \"B\"\n  }\n]","attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":104,"environment":"sit"}
+2025-05-14 12:46:33.245 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].sapi-reference-data-main.CPU_INTENSIVE @50212921]: event:77080100-30c1-11f0-b958-067763caecfd {"integrationId":"bb1b1a40-9399-4bda-b743-216c19547589","logStep":"SERVICE_START","requestId":"bb1b1a40-9399-4bda-b743-216c19547589","correlationId":"77080100-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/3:36","logTimeStamp":"2025-05-14T12:46:33.245+0000","statusMessage":"SUCCESS","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":0,"environment":"sit"}
+2025-05-14 12:46:33.293 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].get:\dwp:sapi-reference-data-config.CPU_INTENSIVE @45e86774]: event:77080100-30c1-11f0-b958-067763caecfd {"integrationId":"bb1b1a40-9399-4bda-b743-216c19547589","logStep":"SERVICE_END","requestId":"bb1b1a40-9399-4bda-b743-216c19547589","correlationId":"77080100-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/5:38","logTimeStamp":"2025-05-14T12:46:33.292+0000","statusCode":"200","statusMessage":"OK","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"payload":"[\n  {\n    \"CLIENT_NO\": \"11704\",\n    \"LIMIT_TO\": null,\n    \"LIMIT_FROM\": null,\n    \"DWP_SEQ_NO\": 2059,\n    \"TAG53_BIC\": null,\n    \"CCY\": \"GBP\",\n    \"TAG53_ACCOUNT\": \"60000148568910\",\n    \"TAG53_ADDRESS\": null,\n    \"TAG53_OPT\": \"B\"\n  }\n]","attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":47,"environment":"sit"}
+2025-05-14 12:46:35.481 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].sapi-reference-data-main.CPU_INTENSIVE @50212921]: event:785d30c0-30c1-11f0-b958-067763caecfd {"integrationId":"bd516a1f-4614-4d46-bfbe-95343aa9d8d7","logStep":"SERVICE_START","requestId":"bd516a1f-4614-4d46-bfbe-95343aa9d8d7","correlationId":"785d30c0-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/3:36","logTimeStamp":"2025-05-14T12:46:35.480+0000","statusMessage":"SUCCESS","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":0,"environment":"sit"}
+2025-05-14 12:46:35.528 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].get:\dwp:sapi-reference-data-config.CPU_INTENSIVE @45e86774]: event:785d30c0-30c1-11f0-b958-067763caecfd {"integrationId":"bd516a1f-4614-4d46-bfbe-95343aa9d8d7","logStep":"SERVICE_END","requestId":"bd516a1f-4614-4d46-bfbe-95343aa9d8d7","correlationId":"785d30c0-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/5:38","logTimeStamp":"2025-05-14T12:46:35.528+0000","statusCode":"200","statusMessage":"OK","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"payload":"[\n  {\n    \"CLIENT_NO\": \"11704\",\n    \"LIMIT_TO\": null,\n    \"LIMIT_FROM\": null,\n    \"DWP_SEQ_NO\": 2059,\n    \"TAG53_BIC\": null,\n    \"CCY\": \"GBP\",\n    \"TAG53_ACCOUNT\": \"60000148568910\",\n    \"TAG53_ADDRESS\": null,\n    \"TAG53_OPT\": \"B\"\n  }\n]","attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":48,"environment":"sit"}
+2025-05-14 12:46:37.114 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].sapi-reference-data-main.CPU_INTENSIVE @50212921]: event:79565dd0-30c1-11f0-b958-067763caecfd {"integrationId":"c4e7b6dd-d7b9-4754-8fc9-2fdb8660d9a2","logStep":"SERVICE_START","requestId":"c4e7b6dd-d7b9-4754-8fc9-2fdb8660d9a2","correlationId":"79565dd0-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/3:36","logTimeStamp":"2025-05-14T12:46:37.114+0000","statusMessage":"SUCCESS","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":0,"environment":"sit"}
+2025-05-14 12:46:37.163 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].get:\dwp:sapi-reference-data-config.CPU_INTENSIVE @45e86774]: event:79565dd0-30c1-11f0-b958-067763caecfd {"integrationId":"c4e7b6dd-d7b9-4754-8fc9-2fdb8660d9a2","logStep":"SERVICE_END","requestId":"c4e7b6dd-d7b9-4754-8fc9-2fdb8660d9a2","correlationId":"79565dd0-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/5:38","logTimeStamp":"2025-05-14T12:46:37.163+0000","statusCode":"200","statusMessage":"OK","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"payload":"[\n  {\n    \"CLIENT_NO\": \"11704\",\n    \"LIMIT_TO\": null,\n    \"LIMIT_FROM\": null,\n    \"DWP_SEQ_NO\": 2059,\n    \"TAG53_BIC\": null,\n    \"CCY\": \"GBP\",\n    \"TAG53_ACCOUNT\": \"60000148568910\",\n    \"TAG53_ADDRESS\": null,\n    \"TAG53_OPT\": \"B\"\n  }\n]","attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":49,"environment":"sit"}
+2025-05-14 12:46:42.002 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].sapi-reference-data-main.CPU_INTENSIVE @50212921]: event:7c403750-30c1-11f0-b958-067763caecfd {"integrationId":"bec89ed2-698b-48cb-925f-e6d79cf64fec","logStep":"SERVICE_START","requestId":"bec89ed2-698b-48cb-925f-e6d79cf64fec","correlationId":"7c403750-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/3:36","logTimeStamp":"2025-05-14T12:46:42.002+0000","statusMessage":"SUCCESS","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":0,"environment":"sit"}
+2025-05-14 12:46:42.054 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].get:\dwp:sapi-reference-data-config.CPU_INTENSIVE @45e86774]: event:7c403750-30c1-11f0-b958-067763caecfd {"integrationId":"bec89ed2-698b-48cb-925f-e6d79cf64fec","logStep":"SERVICE_END","requestId":"bec89ed2-698b-48cb-925f-e6d79cf64fec","correlationId":"7c403750-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/5:38","logTimeStamp":"2025-05-14T12:46:42.050+0000","statusCode":"200","statusMessage":"OK","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"payload":"[\n  {\n    \"CLIENT_NO\": \"11704\",\n    \"LIMIT_TO\": null,\n    \"LIMIT_FROM\": null,\n    \"DWP_SEQ_NO\": 2059,\n    \"TAG53_BIC\": null,\n    \"CCY\": \"GBP\",\n    \"TAG53_ACCOUNT\": \"60000148568910\",\n    \"TAG53_ADDRESS\": null,\n    \"TAG53_OPT\": \"B\"\n  }\n]","attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":48,"environment":"sit"}
+2025-05-14 12:46:43.716 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].sapi-reference-data-main.CPU_INTENSIVE @50212921]: event:7d45e780-30c1-11f0-b958-067763caecfd {"integrationId":"be79f6d3-c3e1-43c2-b3b3-4149ea35c281","logStep":"SERVICE_START","requestId":"be79f6d3-c3e1-43c2-b3b3-4149ea35c281","correlationId":"7d45e780-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/3:36","logTimeStamp":"2025-05-14T12:46:43.716+0000","statusMessage":"SUCCESS","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":0,"environment":"sit"}
+2025-05-14 12:46:43.763 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].get:\dwp:sapi-reference-data-config.CPU_INTENSIVE @45e86774]: event:7d45e780-30c1-11f0-b958-067763caecfd {"integrationId":"be79f6d3-c3e1-43c2-b3b3-4149ea35c281","logStep":"SERVICE_END","requestId":"be79f6d3-c3e1-43c2-b3b3-4149ea35c281","correlationId":"7d45e780-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/5:38","logTimeStamp":"2025-05-14T12:46:43.762+0000","statusCode":"200","statusMessage":"OK","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"payload":"[\n  {\n    \"CLIENT_NO\": \"11704\",\n    \"LIMIT_TO\": null,\n    \"LIMIT_FROM\": null,\n    \"DWP_SEQ_NO\": 2059,\n    \"TAG53_BIC\": null,\n    \"CCY\": \"GBP\",\n    \"TAG53_ACCOUNT\": \"60000148568910\",\n    \"TAG53_ADDRESS\": null,\n    \"TAG53_OPT\": \"B\"\n  }\n]","attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":46,"environment":"sit"}
+2025-05-14 12:46:48.099 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].sapi-reference-data-main.CPU_INTENSIVE @50212921]: event:7fe2b270-30c1-11f0-b958-067763caecfd {"integrationId":"9b5d38b4-62f8-435e-be54-a34d212dd71d","logStep":"SERVICE_START","requestId":"9b5d38b4-62f8-435e-be54-a34d212dd71d","correlationId":"7fe2b270-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/3:36","logTimeStamp":"2025-05-14T12:46:48.098+0000","statusMessage":"SUCCESS","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":0,"environment":"sit"}
+2025-05-14 12:46:48.144 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].get:\dwp:sapi-reference-data-config.CPU_INTENSIVE @45e86774]: event:7fe2b270-30c1-11f0-b958-067763caecfd {"integrationId":"9b5d38b4-62f8-435e-be54-a34d212dd71d","logStep":"SERVICE_END","requestId":"9b5d38b4-62f8-435e-be54-a34d212dd71d","correlationId":"7fe2b270-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/5:38","logTimeStamp":"2025-05-14T12:46:48.144+0000","statusCode":"200","statusMessage":"OK","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"payload":"[\n  {\n    \"CLIENT_NO\": \"11704\",\n    \"LIMIT_TO\": null,\n    \"LIMIT_FROM\": null,\n    \"DWP_SEQ_NO\": 2059,\n    \"TAG53_BIC\": null,\n    \"CCY\": \"GBP\",\n    \"TAG53_ACCOUNT\": \"60000148568910\",\n    \"TAG53_ADDRESS\": null,\n    \"TAG53_OPT\": \"B\"\n  }\n]","attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":46,"environment":"sit"}
+2025-05-14 12:46:49.950 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].sapi-reference-data-main.CPU_INTENSIVE @50212921]: event:80fcd500-30c1-11f0-b958-067763caecfd {"integrationId":"c8c9dacb-7fce-43e4-8100-bd24302b7dfc","logStep":"SERVICE_START","requestId":"c8c9dacb-7fce-43e4-8100-bd24302b7dfc","correlationId":"80fcd500-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/3:36","logTimeStamp":"2025-05-14T12:46:49.950+0000","statusMessage":"SUCCESS","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":0,"environment":"sit"}
+2025-05-14 12:46:50.001 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].get:\dwp:sapi-reference-data-config.CPU_INTENSIVE @45e86774]: event:80fcd500-30c1-11f0-b958-067763caecfd {"integrationId":"c8c9dacb-7fce-43e4-8100-bd24302b7dfc","logStep":"SERVICE_END","requestId":"c8c9dacb-7fce-43e4-8100-bd24302b7dfc","correlationId":"80fcd500-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/5:38","logTimeStamp":"2025-05-14T12:46:50.000+0000","statusCode":"200","statusMessage":"OK","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"payload":"[\n  {\n    \"CLIENT_NO\": \"11704\",\n    \"LIMIT_TO\": null,\n    \"LIMIT_FROM\": null,\n    \"DWP_SEQ_NO\": 2059,\n    \"TAG53_BIC\": null,\n    \"CCY\": \"GBP\",\n    \"TAG53_ACCOUNT\": \"60000148568910\",\n    \"TAG53_ADDRESS\": null,\n    \"TAG53_OPT\": \"B\"\n  }\n]","attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":50,"environment":"sit"}
+2025-05-14 12:46:51.955 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].sapi-reference-data-main.CPU_INTENSIVE @50212921]: event:822e2910-30c1-11f0-b958-067763caecfd {"integrationId":"27d9c044-d2a8-4fac-be2b-50f76670045a","logStep":"SERVICE_START","requestId":"27d9c044-d2a8-4fac-be2b-50f76670045a","correlationId":"822e2910-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/3:36","logTimeStamp":"2025-05-14T12:46:51.955+0000","statusMessage":"SUCCESS","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":0,"environment":"sit"}
+2025-05-14 12:46:52.007 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].get:\dwp:sapi-reference-data-config.CPU_INTENSIVE @45e86774]: event:822e2910-30c1-11f0-b958-067763caecfd {"integrationId":"27d9c044-d2a8-4fac-be2b-50f76670045a","logStep":"SERVICE_END","requestId":"27d9c044-d2a8-4fac-be2b-50f76670045a","correlationId":"822e2910-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/5:38","logTimeStamp":"2025-05-14T12:46:52.007+0000","statusCode":"200","statusMessage":"OK","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"payload":"[\n  {\n    \"CLIENT_NO\": \"11704\",\n    \"LIMIT_TO\": null,\n    \"LIMIT_FROM\": null,\n    \"DWP_SEQ_NO\": 2059,\n    \"TAG53_BIC\": null,\n    \"CCY\": \"GBP\",\n    \"TAG53_ACCOUNT\": \"60000148568910\",\n    \"TAG53_ADDRESS\": null,\n    \"TAG53_OPT\": \"B\"\n  }\n]","attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":52,"environment":"sit"}
+2025-05-14 12:46:54.862 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].sapi-reference-data-main.CPU_INTENSIVE @50212921]: event:83eacd30-30c1-11f0-b958-067763caecfd {"integrationId":"fb8fc635-0be8-4255-b7d8-4084a539e5fb","logStep":"SERVICE_START","requestId":"fb8fc635-0be8-4255-b7d8-4084a539e5fb","correlationId":"83eacd30-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/3:36","logTimeStamp":"2025-05-14T12:46:54.862+0000","statusMessage":"SUCCESS","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":0,"environment":"sit"}
+2025-05-14 12:46:54.908 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].get:\dwp:sapi-reference-data-config.CPU_INTENSIVE @45e86774]: event:83eacd30-30c1-11f0-b958-067763caecfd {"integrationId":"fb8fc635-0be8-4255-b7d8-4084a539e5fb","logStep":"SERVICE_END","requestId":"fb8fc635-0be8-4255-b7d8-4084a539e5fb","correlationId":"83eacd30-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/5:38","logTimeStamp":"2025-05-14T12:46:54.907+0000","statusCode":"200","statusMessage":"OK","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"payload":"[\n  {\n    \"CLIENT_NO\": \"11704\",\n    \"LIMIT_TO\": null,\n    \"LIMIT_FROM\": null,\n    \"DWP_SEQ_NO\": 2059,\n    \"TAG53_BIC\": null,\n    \"CCY\": \"GBP\",\n    \"TAG53_ACCOUNT\": \"60000148568910\",\n    \"TAG53_ADDRESS\": null,\n    \"TAG53_OPT\": \"B\"\n  }\n]","attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":45,"environment":"sit"}
+2025-05-14 12:46:57.176 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].sapi-reference-data-main.CPU_INTENSIVE @50212921]: event:854b95b0-30c1-11f0-b958-067763caecfd {"integrationId":"bde2c96e-08c1-4358-979f-faaffdc26c6f","logStep":"SERVICE_START","requestId":"bde2c96e-08c1-4358-979f-faaffdc26c6f","correlationId":"854b95b0-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/3:36","logTimeStamp":"2025-05-14T12:46:57.175+0000","statusMessage":"SUCCESS","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":0,"environment":"sit"}
+2025-05-14 12:46:57.221 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].get:\dwp:sapi-reference-data-config.CPU_INTENSIVE @45e86774]: event:854b95b0-30c1-11f0-b958-067763caecfd {"integrationId":"bde2c96e-08c1-4358-979f-faaffdc26c6f","logStep":"SERVICE_END","requestId":"bde2c96e-08c1-4358-979f-faaffdc26c6f","correlationId":"854b95b0-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/5:38","logTimeStamp":"2025-05-14T12:46:57.221+0000","statusCode":"200","statusMessage":"OK","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"payload":"[\n  {\n    \"CLIENT_NO\": \"11704\",\n    \"LIMIT_TO\": null,\n    \"LIMIT_FROM\": null,\n    \"DWP_SEQ_NO\": 2059,\n    \"TAG53_BIC\": null,\n    \"CCY\": \"GBP\",\n    \"TAG53_ACCOUNT\": \"60000148568910\",\n    \"TAG53_ADDRESS\": null,\n    \"TAG53_OPT\": \"B\"\n  }\n]","attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":46,"environment":"sit"}
+2025-05-14 12:46:59.507 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].sapi-reference-data-main.CPU_INTENSIVE @50212921]: event:86af1d50-30c1-11f0-b958-067763caecfd {"integrationId":"365c3185-522d-4fa7-b3d4-770474ecd7b0","logStep":"SERVICE_START","requestId":"365c3185-522d-4fa7-b3d4-770474ecd7b0","correlationId":"86af1d50-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/3:36","logTimeStamp":"2025-05-14T12:46:59.507+0000","statusMessage":"SUCCESS","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":0,"environment":"sit"}
+2025-05-14 12:46:59.572 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].get:\dwp:sapi-reference-data-config.CPU_INTENSIVE @45e86774]: event:86af1d50-30c1-11f0-b958-067763caecfd {"integrationId":"365c3185-522d-4fa7-b3d4-770474ecd7b0","logStep":"SERVICE_END","requestId":"365c3185-522d-4fa7-b3d4-770474ecd7b0","correlationId":"86af1d50-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/5:38","logTimeStamp":"2025-05-14T12:46:59.571+0000","statusCode":"200","statusMessage":"OK","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"payload":"[\n  {\n    \"CLIENT_NO\": \"11704\",\n    \"LIMIT_TO\": null,\n    \"LIMIT_FROM\": null,\n    \"DWP_SEQ_NO\": 2059,\n    \"TAG53_BIC\": null,\n    \"CCY\": \"GBP\",\n    \"TAG53_ACCOUNT\": \"60000148568910\",\n    \"TAG53_ADDRESS\": null,\n    \"TAG53_OPT\": \"B\"\n  }\n]","attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":64,"environment":"sit"}
+2025-05-14 12:47:01.283 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].sapi-reference-data-main.CPU_INTENSIVE @50212921]: event:87be4360-30c1-11f0-b958-067763caecfd {"integrationId":"d0d2f323-8f8f-4b6a-8a78-81732d7757cd","logStep":"SERVICE_START","requestId":"d0d2f323-8f8f-4b6a-8a78-81732d7757cd","correlationId":"87be4360-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/3:36","logTimeStamp":"2025-05-14T12:47:01.282+0000","statusMessage":"SUCCESS","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":0,"environment":"sit"}
+2025-05-14 12:47:01.353 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].get:\dwp:sapi-reference-data-config.CPU_INTENSIVE @45e86774]: event:87be4360-30c1-11f0-b958-067763caecfd {"integrationId":"d0d2f323-8f8f-4b6a-8a78-81732d7757cd","logStep":"SERVICE_END","requestId":"d0d2f323-8f8f-4b6a-8a78-81732d7757cd","correlationId":"87be4360-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/5:38","logTimeStamp":"2025-05-14T12:47:01.353+0000","statusCode":"200","statusMessage":"OK","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"payload":"[\n  {\n    \"CLIENT_NO\": \"11704\",\n    \"LIMIT_TO\": null,\n    \"LIMIT_FROM\": null,\n    \"DWP_SEQ_NO\": 2059,\n    \"TAG53_BIC\": null,\n    \"CCY\": \"GBP\",\n    \"TAG53_ACCOUNT\": \"60000148568910\",\n    \"TAG53_ADDRESS\": null,\n    \"TAG53_OPT\": \"B\"\n  }\n]","attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":71,"environment":"sit"}
+2025-05-14 12:47:05.153 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].sapi-reference-data-main.CPU_INTENSIVE @50212921]: event:8a0cee50-30c1-11f0-b958-067763caecfd {"integrationId":"3e95c852-949b-4329-bfb5-03e536554c56","logStep":"SERVICE_START","requestId":"3e95c852-949b-4329-bfb5-03e536554c56","correlationId":"8a0cee50-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/3:36","logTimeStamp":"2025-05-14T12:47:05.153+0000","statusMessage":"SUCCESS","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":0,"environment":"sit"}
+2025-05-14 12:47:05.239 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].get:\dwp:sapi-reference-data-config.CPU_INTENSIVE @45e86774]: event:8a0cee50-30c1-11f0-b958-067763caecfd {"integrationId":"3e95c852-949b-4329-bfb5-03e536554c56","logStep":"SERVICE_END","requestId":"3e95c852-949b-4329-bfb5-03e536554c56","correlationId":"8a0cee50-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/5:38","logTimeStamp":"2025-05-14T12:47:05.238+0000","statusCode":"200","statusMessage":"OK","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"payload":"[\n  {\n    \"CLIENT_NO\": \"11704\",\n    \"LIMIT_TO\": null,\n    \"LIMIT_FROM\": null,\n    \"DWP_SEQ_NO\": 2059,\n    \"TAG53_BIC\": null,\n    \"CCY\": \"GBP\",\n    \"TAG53_ACCOUNT\": \"60000148568910\",\n    \"TAG53_ADDRESS\": null,\n    \"TAG53_OPT\": \"B\"\n  }\n]","attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":85,"environment":"sit"}
+2025-05-14 12:47:07.138 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].sapi-reference-data-main.CPU_INTENSIVE @50212921]: event:8b3b8340-30c1-11f0-b958-067763caecfd {"integrationId":"250ccd24-1c11-4afb-b622-f430d17543d6","logStep":"SERVICE_START","requestId":"250ccd24-1c11-4afb-b622-f430d17543d6","correlationId":"8b3b8340-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/3:36","logTimeStamp":"2025-05-14T12:47:07.137+0000","statusMessage":"SUCCESS","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":0,"environment":"sit"}
+2025-05-14 12:47:07.201 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].get:\dwp:sapi-reference-data-config.CPU_INTENSIVE @45e86774]: event:8b3b8340-30c1-11f0-b958-067763caecfd {"integrationId":"250ccd24-1c11-4afb-b622-f430d17543d6","logStep":"SERVICE_END","requestId":"250ccd24-1c11-4afb-b622-f430d17543d6","correlationId":"8b3b8340-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/5:38","logTimeStamp":"2025-05-14T12:47:07.201+0000","statusCode":"200","statusMessage":"OK","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"payload":"[\n  {\n    \"CLIENT_NO\": \"11704\",\n    \"LIMIT_TO\": null,\n    \"LIMIT_FROM\": null,\n    \"DWP_SEQ_NO\": 2059,\n    \"TAG53_BIC\": null,\n    \"CCY\": \"GBP\",\n    \"TAG53_ACCOUNT\": \"60000148568910\",\n    \"TAG53_ADDRESS\": null,\n    \"TAG53_OPT\": \"B\"\n  }\n]","attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":64,"environment":"sit"}
+2025-05-14 12:47:10.330 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].sapi-reference-data-main.CPU_INTENSIVE @50212921]: event:8d22b9d0-30c1-11f0-b958-067763caecfd {"integrationId":"a703f901-4887-4124-9475-bc00bca198d9","logStep":"SERVICE_START","requestId":"a703f901-4887-4124-9475-bc00bca198d9","correlationId":"8d22b9d0-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/3:36","logTimeStamp":"2025-05-14T12:47:10.329+0000","statusMessage":"SUCCESS","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":0,"environment":"sit"}
+2025-05-14 12:47:10.398 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.02: [otel-sp-test].get:\dwp:sapi-reference-data-config.CPU_INTENSIVE @45e86774]: event:8d22b9d0-30c1-11f0-b958-067763caecfd {"integrationId":"a703f901-4887-4124-9475-bc00bca198d9","logStep":"SERVICE_END","requestId":"a703f901-4887-4124-9475-bc00bca198d9","correlationId":"8d22b9d0-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/5:38","logTimeStamp":"2025-05-14T12:47:10.398+0000","statusCode":"200","statusMessage":"OK","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"payload":"[\n  {\n    \"CLIENT_NO\": \"11704\",\n    \"LIMIT_TO\": null,\n    \"LIMIT_FROM\": null,\n    \"DWP_SEQ_NO\": 2059,\n    \"TAG53_BIC\": null,\n    \"CCY\": \"GBP\",\n    \"TAG53_ACCOUNT\": \"60000148568910\",\n    \"TAG53_ADDRESS\": null,\n    \"TAG53_OPT\": \"B\"\n  }\n]","attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":69,"environment":"sit"}
+2025-05-14 12:47:11.995 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.02: [otel-sp-test].sapi-reference-data-main.CPU_INTENSIVE @50212921]: event:8e20eff0-30c1-11f0-b958-067763caecfd {"integrationId":"d1efbd49-893e-41be-8565-8a4caf591c23","logStep":"SERVICE_START","requestId":"d1efbd49-893e-41be-8565-8a4caf591c23","correlationId":"8e20eff0-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/3:36","logTimeStamp":"2025-05-14T12:47:11.994+0000","statusMessage":"SUCCESS","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":0,"environment":"sit"}
+2025-05-14 12:47:12.060 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.02: [otel-sp-test].get:\dwp:sapi-reference-data-config.CPU_INTENSIVE @45e86774]: event:8e20eff0-30c1-11f0-b958-067763caecfd {"integrationId":"d1efbd49-893e-41be-8565-8a4caf591c23","logStep":"SERVICE_END","requestId":"d1efbd49-893e-41be-8565-8a4caf591c23","correlationId":"8e20eff0-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/5:38","logTimeStamp":"2025-05-14T12:47:12.060+0000","statusCode":"200","statusMessage":"OK","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"payload":"[\n  {\n    \"CLIENT_NO\": \"11704\",\n    \"LIMIT_TO\": null,\n    \"LIMIT_FROM\": null,\n    \"DWP_SEQ_NO\": 2059,\n    \"TAG53_BIC\": null,\n    \"CCY\": \"GBP\",\n    \"TAG53_ACCOUNT\": \"60000148568910\",\n    \"TAG53_ADDRESS\": null,\n    \"TAG53_OPT\": \"B\"\n  }\n]","attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":66,"environment":"sit"}
+2025-05-14 12:47:14.686 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.02: [otel-sp-test].sapi-reference-data-main.CPU_INTENSIVE @50212921]: event:8fbb8d20-30c1-11f0-b958-067763caecfd {"integrationId":"e557ee84-3be8-48e1-a368-8e3ff65fd63c","logStep":"SERVICE_START","requestId":"e557ee84-3be8-48e1-a368-8e3ff65fd63c","correlationId":"8fbb8d20-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/3:36","logTimeStamp":"2025-05-14T12:47:14.686+0000","statusMessage":"SUCCESS","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":0,"environment":"sit"}
+2025-05-14 12:47:14.753 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.02: [otel-sp-test].get:\dwp:sapi-reference-data-config.CPU_INTENSIVE @45e86774]: event:8fbb8d20-30c1-11f0-b958-067763caecfd {"integrationId":"e557ee84-3be8-48e1-a368-8e3ff65fd63c","logStep":"SERVICE_END","requestId":"e557ee84-3be8-48e1-a368-8e3ff65fd63c","correlationId":"8fbb8d20-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/5:38","logTimeStamp":"2025-05-14T12:47:14.752+0000","statusCode":"200","statusMessage":"OK","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"payload":"[\n  {\n    \"CLIENT_NO\": \"11704\",\n    \"LIMIT_TO\": null,\n    \"LIMIT_FROM\": null,\n    \"DWP_SEQ_NO\": 2059,\n    \"TAG53_BIC\": null,\n    \"CCY\": \"GBP\",\n    \"TAG53_ACCOUNT\": \"60000148568910\",\n    \"TAG53_ADDRESS\": null,\n    \"TAG53_OPT\": \"B\"\n  }\n]","attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":66,"environment":"sit"}
+2025-05-14 12:47:17.135 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.02: [otel-sp-test].sapi-reference-data-main.CPU_INTENSIVE @50212921]: event:91313d30-30c1-11f0-b958-067763caecfd {"integrationId":"ead7c08a-48a9-426a-ab3c-e844ff5f2d2f","logStep":"SERVICE_START","requestId":"ead7c08a-48a9-426a-ab3c-e844ff5f2d2f","correlationId":"91313d30-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/3:36","logTimeStamp":"2025-05-14T12:47:17.134+0000","statusMessage":"SUCCESS","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":0,"environment":"sit"}
+2025-05-14 12:47:17.197 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.02: [otel-sp-test].get:\dwp:sapi-reference-data-config.CPU_INTENSIVE @45e86774]: event:91313d30-30c1-11f0-b958-067763caecfd {"integrationId":"ead7c08a-48a9-426a-ab3c-e844ff5f2d2f","logStep":"SERVICE_END","requestId":"ead7c08a-48a9-426a-ab3c-e844ff5f2d2f","correlationId":"91313d30-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/5:38","logTimeStamp":"2025-05-14T12:47:17.196+0000","statusCode":"200","statusMessage":"OK","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"payload":"[\n  {\n    \"CLIENT_NO\": \"11704\",\n    \"LIMIT_TO\": null,\n    \"LIMIT_FROM\": null,\n    \"DWP_SEQ_NO\": 2059,\n    \"TAG53_BIC\": null,\n    \"CCY\": \"GBP\",\n    \"TAG53_ACCOUNT\": \"60000148568910\",\n    \"TAG53_ADDRESS\": null,\n    \"TAG53_OPT\": \"B\"\n  }\n]","attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":62,"environment":"sit"}
+2025-05-14 12:47:19.877 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.02: [otel-sp-test].sapi-reference-data-main.CPU_INTENSIVE @50212921]: event:92cf35c0-30c1-11f0-b958-067763caecfd {"integrationId":"3a48febd-b39d-486a-8a54-ea3466988675","logStep":"SERVICE_START","requestId":"3a48febd-b39d-486a-8a54-ea3466988675","correlationId":"92cf35c0-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/3:36","logTimeStamp":"2025-05-14T12:47:19.877+0000","statusMessage":"SUCCESS","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":0,"environment":"sit"}
+2025-05-14 12:47:19.947 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].get:\dwp:sapi-reference-data-config.CPU_INTENSIVE @45e86774]: event:92cf35c0-30c1-11f0-b958-067763caecfd {"integrationId":"3a48febd-b39d-486a-8a54-ea3466988675","logStep":"SERVICE_END","requestId":"3a48febd-b39d-486a-8a54-ea3466988675","correlationId":"92cf35c0-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/5:38","logTimeStamp":"2025-05-14T12:47:19.947+0000","statusCode":"200","statusMessage":"OK","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"payload":"[\n  {\n    \"CLIENT_NO\": \"11704\",\n    \"LIMIT_TO\": null,\n    \"LIMIT_FROM\": null,\n    \"DWP_SEQ_NO\": 2059,\n    \"TAG53_BIC\": null,\n    \"CCY\": \"GBP\",\n    \"TAG53_ACCOUNT\": \"60000148568910\",\n    \"TAG53_ADDRESS\": null,\n    \"TAG53_OPT\": \"B\"\n  }\n]","attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":70,"environment":"sit"}
+2025-05-14 12:47:22.255 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].sapi-reference-data-main.CPU_INTENSIVE @50212921]: event:943e7d30-30c1-11f0-b958-067763caecfd {"integrationId":"1809c92e-7399-46f2-b169-50608a17e3e0","logStep":"SERVICE_START","requestId":"1809c92e-7399-46f2-b169-50608a17e3e0","correlationId":"943e7d30-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/3:36","logTimeStamp":"2025-05-14T12:47:22.255+0000","statusMessage":"SUCCESS","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":0,"environment":"sit"}
+2025-05-14 12:47:22.316 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].get:\dwp:sapi-reference-data-config.CPU_INTENSIVE @45e86774]: event:943e7d30-30c1-11f0-b958-067763caecfd {"integrationId":"1809c92e-7399-46f2-b169-50608a17e3e0","logStep":"SERVICE_END","requestId":"1809c92e-7399-46f2-b169-50608a17e3e0","correlationId":"943e7d30-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/5:38","logTimeStamp":"2025-05-14T12:47:22.315+0000","statusCode":"200","statusMessage":"OK","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"payload":"[\n  {\n    \"CLIENT_NO\": \"11704\",\n    \"LIMIT_TO\": null,\n    \"LIMIT_FROM\": null,\n    \"DWP_SEQ_NO\": 2059,\n    \"TAG53_BIC\": null,\n    \"CCY\": \"GBP\",\n    \"TAG53_ACCOUNT\": \"60000148568910\",\n    \"TAG53_ADDRESS\": null,\n    \"TAG53_OPT\": \"B\"\n  }\n]","attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":60,"environment":"sit"}
+2025-05-14 12:47:25.129 INFO    com.cab.module.logger.api.ServiceLog [[MuleRuntime].uber.03: [otel-sp-test].sapi-reference-data-main.CPU_INTENSIVE @50212921]: event:95f506d0-30c1-11f0-b958-067763caecfd {"integrationId":"0d24288c-d549-415e-a302-ee053de9ba54","logStep":"SERVICE_START","requestId":"0d24288c-d549-415e-a302-ee053de9ba54","correlationId":"95f506d0-30c1-11f0-b958-067763caecfd","applicationName":"otel-sp-test","serviceName":"sapi-reference-data-main","topServiceName":"sapi-reference-data-main","location":"sapi-reference-data-main/processors/3:36","logTimeStamp":"2025-05-14T12:47:25.128+0000","statusMessage":"SUCCESS","engineMachineName":"ip-10-66-175-112","engineIpAddress":"10.66.175.112","payload":{"attributes":{"queryParams":{"clientNo":"11704","ccy":"GBP","type":"103","value":"1000"}}},"executionMilliseconds":0,"environment":"sit"}
+2025-05-14 12:47:45.146 ERROR   org.mule.db.commons.shaded.internal.domain.connection.JdbcConnectionFactory [[MuleRuntime].uber.03: [otel-sp-test].get:\dwp:sapi-reference-data-config.CPU_INTENSIVE @45e86774]: event:95f506d0-30c1-11f0-b958-067763caecfd Error while creating connection:
+ Message: 'An attempt by a client to checkout a Connection has timed out.', 
+ SQLState: 'null'; 
+ ErrorCode: '0';
+
+java.sql.SQLException: An attempt by a client to checkout a Connection has timed out.
+	at com.mchange.v2.sql.SqlUtils.toSQLException(SqlUtils.java:118)
+	at com.mchange.v2.sql.SqlUtils.toSQLException(SqlUtils.java:77)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:690)
+	at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getConnection(AbstractPoolBackedDataSource.java:140)
+	at org.mule.db.commons.shaded.internal.domain.connection.JdbcConnectionFactory.createConnection(JdbcConnectionFactory.java:53)
+	at org.mule.db.commons.shaded.internal.domain.connection.DbConnectionProvider.connect(DbConnectionProvider.java:137)
+	at org.mule.db.commons.shaded.internal.domain.connection.DbConnectionProvider.connect(DbConnectionProvider.java:72)
+	at org.mule.runtime.module.extension.internal.runtime.config.ClassLoaderConnectionProviderWrapper.connect(ClassLoaderConnectionProviderWrapper.java:60)
+	at org.mule.runtime.core.internal.connection.ConnectionUtils.connect(ConnectionUtils.java:56)
+	at org.mule.runtime.core.internal.connection.AbstractConnectionProviderWrapper.connect(AbstractConnectionProviderWrapper.java:66)
+	at org.mule.runtime.core.internal.connection.ErrorTypeHandlerConnectionProviderWrapper.connect(ErrorTypeHandlerConnectionProviderWrapper.java:63)
+	at org.mule.runtime.core.internal.connection.ConfigNameResolverConnectionProviderWrapper.connect(ConfigNameResolverConnectionProviderWrapper.java:47)
+	at org.mule.runtime.core.internal.connection.ConnectionUtils.connect(ConnectionUtils.java:56)
+	at org.mule.runtime.core.internal.connection.AbstractConnectionProviderWrapper.connect(AbstractConnectionProviderWrapper.java:66)
+	at org.mule.runtime.core.internal.connection.DefaultConnectionProviderWrapper.connect(DefaultConnectionProviderWrapper.java:53)
+	at org.mule.runtime.core.internal.connection.NullConnectionManagementStrategy.getConnectionHandler(NullConnectionManagementStrategy.java:40)
+	at org.mule.runtime.core.internal.connection.DefaultConnectionManager.getConnection(DefaultConnectionManager.java:261)
+	at org.mule.runtime.core.internal.connection.DelegateConnectionManagerAdapter$EagerConnectionManagerAdapter.getConnection(DelegateConnectionManagerAdapter.java:171)
+	at org.mule.runtime.core.internal.connection.DelegateConnectionManagerAdapter.getConnection(DelegateConnectionManagerAdapter.java:87)
+	at org.mule.runtime.module.extension.internal.runtime.connectivity.ExtensionConnectionSupplier.getTransactionlessConnectionHandler(ExtensionConnectionSupplier.java:146)
+	at org.mule.runtime.module.extension.internal.runtime.connectivity.ExtensionConnectionSupplier.getTransactedConnectionHandler(ExtensionConnectionSupplier.java:106)
+	at org.mule.runtime.module.extension.internal.runtime.connectivity.ExtensionConnectionSupplier.getConnectionHandler(ExtensionConnectionSupplier.java:96)
+	at org.mule.runtime.module.extension.internal.runtime.connectivity.ExtensionConnectionSupplier.getConnection(ExtensionConnectionSupplier.java:85)
+	at org.mule.runtime.module.extension.internal.runtime.connectivity.ConnectionInterceptor.getConnection(ConnectionInterceptor.java:116)
+	at org.mule.runtime.module.extension.internal.runtime.connectivity.ConnectionInterceptor.before(ConnectionInterceptor.java:65)
+	at org.mule.runtime.module.extension.internal.runtime.execution.interceptor.LinkedInterceptorChain.before(LinkedInterceptorChain.java:70)
+	at org.mule.runtime.module.extension.internal.runtime.operation.DefaultExecutionMediator.lambda$applyBeforeInterceptors$8(DefaultExecutionMediator.java:292)
+	at org.mule.runtime.module.extension.internal.runtime.operation.DefaultExecutionMediator.lambda$executeWithRetry$2(DefaultExecutionMediator.java:211)
+	at net.jodah.failsafe.Functions.lambda$promiseOfStage$8(Functions.java:193)
+	at net.jodah.failsafe.internal.executor.RetryPolicyExecutor$1.call(RetryPolicyExecutor.java:101)
+	at net.jodah.failsafe.internal.executor.RetryPolicyExecutor.lambda$supplyAsync$1(RetryPolicyExecutor.java:133)
+	at net.jodah.failsafe.Functions.lambda$null$1(Functions.java:69)
+	at org.mule.runtime.core.internal.util.rx.ConditionalExecutorServiceDecorator.synchronousSchedule(ConditionalExecutorServiceDecorator.java:181)
+	at org.mule.runtime.core.internal.util.rx.ConditionalExecutorServiceDecorator.schedule(ConditionalExecutorServiceDecorator.java:167)
+	at net.jodah.failsafe.Functions.lambda$makeAsync$2(Functions.java:79)
+	at net.jodah.failsafe.AsyncExecution.executeAsync(AsyncExecution.java:174)
+	at net.jodah.failsafe.FailsafeExecutor.callAsync(FailsafeExecutor.java:346)
+	at net.jodah.failsafe.FailsafeExecutor.getStageAsync(FailsafeExecutor.java:178)
+	at org.mule.runtime.core.internal.retry.policies.SimpleRetryPolicy.applyPolicy(SimpleRetryPolicy.java:95)
+	at org.mule.runtime.core.api.retry.policy.RetryPolicyTemplate.applyPolicy(RetryPolicyTemplate.java:143)
+	at org.mule.runtime.module.extension.internal.runtime.operation.DefaultExecutionMediator.executeWithRetry(DefaultExecutionMediator.java:209)
+	at org.mule.runtime.module.extension.internal.runtime.operation.DefaultExecutionMediator.lambda$applyBeforeInterceptors$9(DefaultExecutionMediator.java:291)
+	at org.mule.runtime.core.internal.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:15)
+	at org.mule.runtime.core.internal.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:80)
+	at org.mule.runtime.core.internal.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:46)
+	at org.mule.runtime.core.internal.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:43)
+	at org.mule.runtime.core.internal.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:37)
+	at org.mule.runtime.core.api.execution.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:195)
+	at org.mule.runtime.module.extension.internal.runtime.operation.DefaultExecutionMediator.withExecutionTemplate(DefaultExecutionMediator.java:332)
+	at org.mule.runtime.module.extension.internal.runtime.operation.DefaultExecutionMediator.applyBeforeInterceptors(DefaultExecutionMediator.java:286)
+	at org.mule.runtime.module.extension.internal.runtime.operation.ComponentMessageProcessor.resolveParameters(ComponentMessageProcessor.java:1131)
+	at org.mule.runtime.core.internal.processor.interceptor.ReactiveInterceptorAdapter.setInternalParamsForNotParamResolver(ReactiveInterceptorAdapter.java:244)
+	at org.mule.runtime.core.internal.processor.interceptor.ReactiveInterceptorAdapter.resolveParameters(ReactiveInterceptorAdapter.java:235)
+	at org.mule.runtime.core.internal.processor.interceptor.AbstractInterceptorAdapter.addResolvedParameters(AbstractInterceptorAdapter.java:67)
+	at org.mule.runtime.core.internal.processor.interceptor.ReactiveAroundInterceptorAdapter.doAround(ReactiveAroundInterceptorAdapter.java:81)
+	at org.mule.runtime.core.internal.processor.interceptor.ReactiveAroundInterceptorAdapter.lambda$doApply$0(ReactiveAroundInterceptorAdapter.java:71)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onNext(FluxFlatMap.java:386)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129)
+	at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2398)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:171)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:171)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:171)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:171)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onSubscribe(FluxFlatMap.java:371)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+	at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:55)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:62)
+	at reactor.core.publisher.FluxDeferContextual.subscribe(FluxDeferContextual.java:57)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4397)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onNext(FluxFlatMap.java:426)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:210)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:210)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:210)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:630)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:625)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:137)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:210)
+	at reactor.core.publisher.FluxOnAssembly$OnAssemblySubscriber.onNext(FluxOnAssembly.java:539)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129)
+	at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2398)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:171)
+	at reactor.core.publisher.FluxOnAssembly$OnAssemblySubscriber.request(FluxOnAssembly.java:649)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.request(FluxPeekFuseable.java:144)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.request(FluxHide.java:152)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.request(FluxContextWrite.java:136)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.request(FluxPeekFuseable.java:144)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.request(FluxPeekFuseable.java:144)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.request(FluxPeekFuseable.java:144)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onSubscribe(FluxFlatMap.java:371)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onSubscribe(FluxPeekFuseable.java:178)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onSubscribe(FluxPeekFuseable.java:178)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onSubscribe(FluxPeekFuseable.java:178)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onSubscribe(FluxContextWrite.java:101)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onSubscribe(AbstractMessageProcessorChain.java:651)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onSubscribe(FluxHide.java:122)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onSubscribe(FluxPeekFuseable.java:178)
+	at reactor.core.publisher.FluxOnAssembly$OnAssemblySubscriber.onSubscribe(FluxOnAssembly.java:633)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+	at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:55)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:62)
+	at reactor.core.publisher.FluxDeferContextual.subscribe(FluxDeferContextual.java:57)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:62)
+	at reactor.core.publisher.FluxDeferContextual.subscribe(FluxDeferContextual.java:57)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:62)
+	at reactor.core.publisher.FluxDeferContextual.subscribe(FluxDeferContextual.java:57)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8466)
+	at reactor.core.publisher.Flux.subscribeWith(Flux.java:8639)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8436)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8360)
+	at org.mule.runtime.core.internal.util.rx.RxUtils.lambda$subscribeFluxOnPublisherSubscription$0(RxUtils.java:128)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableConditionalSubscriber.onSubscribe(FluxPeekFuseable.java:462)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableConditionalSubscriber.onSubscribe(FluxPeekFuseable.java:471)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onSubscribe(FluxContextWrite.java:101)
+	at reactor.core.publisher.FluxCreate.subscribe(FluxCreate.java:93)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:62)
+	at reactor.core.publisher.FluxDeferContextual.subscribe(FluxDeferContextual.java:57)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:62)
+	at reactor.core.publisher.FluxDeferContextual.subscribe(FluxDeferContextual.java:57)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:62)
+	at reactor.core.publisher.FluxDeferContextual.subscribe(FluxDeferContextual.java:57)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4397)
+	at reactor.core.publisher.Mono.subscribeWith(Mono.java:4512)
+	at reactor.core.publisher.Mono.toFuture(Mono.java:4917)
+	at org.mule.runtime.core.internal.processor.interceptor.ReactiveInterceptionAction.proceed(ReactiveInterceptionAction.java:76)
+	at com.avioconsulting.mule.opentelemetry.internal.interceptor.ProcessorTracingInterceptor.around(ProcessorTracingInterceptor.java:192)
+	at org.mule.runtime.core.internal.processor.interceptor.ProcessorInterceptorWrapper.around(ProcessorInterceptorWrapper.java:68)
+	at org.mule.runtime.core.internal.processor.interceptor.ReactiveAroundInterceptorAdapter.lambda$doAround$3(ReactiveAroundInterceptorAdapter.java:94)
+	at org.mule.runtime.core.api.util.ExceptionUtils.tryExpecting(ExceptionUtils.java:224)
+	at org.mule.runtime.core.api.util.ClassUtils.withContextClassLoader(ClassUtils.java:1102)
+	at org.mule.runtime.core.api.util.ClassUtils.withContextClassLoader(ClassUtils.java:1020)
+	at org.mule.runtime.core.internal.processor.interceptor.ReactiveAroundInterceptorAdapter.doAround(ReactiveAroundInterceptorAdapter.java:93)
+	at org.mule.runtime.core.internal.processor.interceptor.ReactiveAroundInterceptorAdapter.lambda$doApply$0(ReactiveAroundInterceptorAdapter.java:71)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onNext(FluxFlatMap.java:386)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129)
+	at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2398)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:171)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:171)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:171)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:171)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onSubscribe(FluxFlatMap.java:371)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+	at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:55)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:62)
+	at reactor.core.publisher.FluxDeferContextual.subscribe(FluxDeferContextual.java:57)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4397)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onNext(FluxFlatMap.java:426)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:210)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.tryEmit(FluxFlatMap.java:543)
+	at reactor.core.publisher.FluxFlatMap$FlatMapInner.onNext(FluxFlatMap.java:984)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.tryEmit(FluxFlatMap.java:543)
+	at reactor.core.publisher.FluxFlatMap$FlatMapInner.onNext(FluxFlatMap.java:984)
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1816)
+	at reactor.core.publisher.MonoCompletionStage.lambda$subscribe$0(MonoCompletionStage.java:83)
+	at java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:774)
+	at java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:750)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:1975)
+	at reactor.core.publisher.MonoToCompletableFuture.onNext(MonoToCompletableFuture.java:64)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.tryEmit(FluxFlatMap.java:543)
+	at reactor.core.publisher.FluxFlatMap$FlatMapInner.onNext(FluxFlatMap.java:984)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:210)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:630)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:625)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:137)
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableSubscriber.onNext(FluxHandleFuseable.java:191)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:630)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:625)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:137)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:210)
+	at reactor.core.publisher.FluxOnAssembly$OnAssemblySubscriber.onNext(FluxOnAssembly.java:539)
+	at reactor.core.publisher.FluxSubscribeOnValue$ScheduledScalar.run(FluxSubscribeOnValue.java:180)
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:68)
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:28)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.mule.service.scheduler.internal.AbstractRunnableFutureDecorator.doRun(AbstractRunnableFutureDecorator.java:180)
+	at org.mule.service.scheduler.internal.RunnableFutureDecorator.run(RunnableFutureDecorator.java:55)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: com.mchange.v2.resourcepool.TimeoutException: A client timed out while waiting to acquire a resource from com.mchange.v2.resourcepool.BasicResourcePool@1752d4eb -- timeout at awaitAvailable()
+	at com.mchange.v2.resourcepool.BasicResourcePool.awaitAvailable(BasicResourcePool.java:1505)
+	at com.mchange.v2.resourcepool.BasicResourcePool.prelimCheckoutResource(BasicResourcePool.java:644)
+	at com.mchange.v2.resourcepool.BasicResourcePool.checkoutResource(BasicResourcePool.java:554)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutAndMarkConnectionInUse(C3P0PooledConnectionPool.java:758)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:685)
+	... 208 more
+
+
+2025-05-14 12:48:25.204 ERROR   org.mule.db.commons.shaded.internal.domain.connection.JdbcConnectionFactory [[MuleRuntime].uber.03: [otel-sp-test].get:\dwp:sapi-reference-data-config.CPU_INTENSIVE @45e86774]: event:95f506d0-30c1-11f0-b958-067763caecfd Error while creating connection:
+ Message: 'An attempt by a client to checkout a Connection has timed out.', 
+ SQLState: 'null'; 
+ ErrorCode: '0';
+
+java.sql.SQLException: An attempt by a client to checkout a Connection has timed out.
+	at com.mchange.v2.sql.SqlUtils.toSQLException(SqlUtils.java:118)
+	at com.mchange.v2.sql.SqlUtils.toSQLException(SqlUtils.java:77)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:690)
+	at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getConnection(AbstractPoolBackedDataSource.java:140)
+	at org.mule.db.commons.shaded.internal.domain.connection.JdbcConnectionFactory.createConnection(JdbcConnectionFactory.java:53)
+	at org.mule.db.commons.shaded.internal.domain.connection.DbConnectionProvider.connect(DbConnectionProvider.java:137)
+	at org.mule.db.commons.shaded.internal.domain.connection.DbConnectionProvider.connect(DbConnectionProvider.java:72)
+	at org.mule.runtime.module.extension.internal.runtime.config.ClassLoaderConnectionProviderWrapper.connect(ClassLoaderConnectionProviderWrapper.java:60)
+	at org.mule.runtime.core.internal.connection.ConnectionUtils.connect(ConnectionUtils.java:56)
+	at org.mule.runtime.core.internal.connection.AbstractConnectionProviderWrapper.connect(AbstractConnectionProviderWrapper.java:66)
+	at org.mule.runtime.core.internal.connection.ErrorTypeHandlerConnectionProviderWrapper.connect(ErrorTypeHandlerConnectionProviderWrapper.java:63)
+	at org.mule.runtime.core.internal.connection.ConfigNameResolverConnectionProviderWrapper.connect(ConfigNameResolverConnectionProviderWrapper.java:47)
+	at org.mule.runtime.core.internal.connection.ConnectionUtils.connect(ConnectionUtils.java:56)
+	at org.mule.runtime.core.internal.connection.AbstractConnectionProviderWrapper.connect(AbstractConnectionProviderWrapper.java:66)
+	at org.mule.runtime.core.internal.connection.DefaultConnectionProviderWrapper.connect(DefaultConnectionProviderWrapper.java:53)
+	at org.mule.runtime.core.internal.connection.NullConnectionManagementStrategy.getConnectionHandler(NullConnectionManagementStrategy.java:40)
+	at org.mule.runtime.core.internal.connection.DefaultConnectionManager.getConnection(DefaultConnectionManager.java:261)
+	at org.mule.runtime.core.internal.connection.DelegateConnectionManagerAdapter$EagerConnectionManagerAdapter.getConnection(DelegateConnectionManagerAdapter.java:171)
+	at org.mule.runtime.core.internal.connection.DelegateConnectionManagerAdapter.getConnection(DelegateConnectionManagerAdapter.java:87)
+	at org.mule.runtime.module.extension.internal.runtime.connectivity.ExtensionConnectionSupplier.getTransactionlessConnectionHandler(ExtensionConnectionSupplier.java:146)
+	at org.mule.runtime.module.extension.internal.runtime.connectivity.ExtensionConnectionSupplier.getTransactedConnectionHandler(ExtensionConnectionSupplier.java:106)
+	at org.mule.runtime.module.extension.internal.runtime.connectivity.ExtensionConnectionSupplier.getConnectionHandler(ExtensionConnectionSupplier.java:96)
+	at org.mule.runtime.module.extension.internal.runtime.connectivity.ExtensionConnectionSupplier.getConnection(ExtensionConnectionSupplier.java:85)
+	at org.mule.runtime.module.extension.internal.runtime.connectivity.ConnectionInterceptor.getConnection(ConnectionInterceptor.java:116)
+	at org.mule.runtime.module.extension.internal.runtime.connectivity.ConnectionInterceptor.before(ConnectionInterceptor.java:65)
+	at org.mule.runtime.module.extension.internal.runtime.execution.interceptor.LinkedInterceptorChain.before(LinkedInterceptorChain.java:70)
+	at org.mule.runtime.module.extension.internal.runtime.operation.DefaultExecutionMediator.lambda$applyBeforeInterceptors$8(DefaultExecutionMediator.java:292)
+	at org.mule.runtime.module.extension.internal.runtime.operation.DefaultExecutionMediator.lambda$executeWithRetry$2(DefaultExecutionMediator.java:211)
+	at net.jodah.failsafe.Functions.lambda$promiseOfStage$8(Functions.java:193)
+	at net.jodah.failsafe.internal.executor.RetryPolicyExecutor$1.call(RetryPolicyExecutor.java:101)
+	at org.mule.runtime.core.internal.util.rx.SynchronousScheduledFuture.synchronousSchedule(SynchronousScheduledFuture.java:32)
+	at org.mule.runtime.core.internal.util.rx.ImmediateScheduler.schedule(ImmediateScheduler.java:51)
+	at org.mule.runtime.core.internal.util.rx.ConditionalExecutorServiceDecorator.schedule(ConditionalExecutorServiceDecorator.java:169)
+	at net.jodah.failsafe.internal.executor.RetryPolicyExecutor$1.lambda$null$0(RetryPolicyExecutor.java:110)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670)
+	at java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:683)
+	at java.util.concurrent.CompletableFuture.thenAccept(CompletableFuture.java:2010)
+	at net.jodah.failsafe.internal.executor.RetryPolicyExecutor$1.lambda$call$1(RetryPolicyExecutor.java:119)
+	at java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:836)
+	at java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:848)
+	at java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2168)
+	at net.jodah.failsafe.internal.executor.RetryPolicyExecutor$1.call(RetryPolicyExecutor.java:101)
+	at net.jodah.failsafe.internal.executor.RetryPolicyExecutor.lambda$supplyAsync$1(RetryPolicyExecutor.java:133)
+	at net.jodah.failsafe.Functions.lambda$null$1(Functions.java:69)
+	at org.mule.runtime.core.internal.util.rx.ConditionalExecutorServiceDecorator.synchronousSchedule(ConditionalExecutorServiceDecorator.java:181)
+	at org.mule.runtime.core.internal.util.rx.ConditionalExecutorServiceDecorator.schedule(ConditionalExecutorServiceDecorator.java:167)
+	at net.jodah.failsafe.Functions.lambda$makeAsync$2(Functions.java:79)
+	at net.jodah.failsafe.AsyncExecution.executeAsync(AsyncExecution.java:174)
+	at net.jodah.failsafe.FailsafeExecutor.callAsync(FailsafeExecutor.java:346)
+	at net.jodah.failsafe.FailsafeExecutor.getStageAsync(FailsafeExecutor.java:178)
+	at org.mule.runtime.core.internal.retry.policies.SimpleRetryPolicy.applyPolicy(SimpleRetryPolicy.java:95)
+	at org.mule.runtime.core.api.retry.policy.RetryPolicyTemplate.applyPolicy(RetryPolicyTemplate.java:143)
+	at org.mule.runtime.module.extension.internal.runtime.operation.DefaultExecutionMediator.executeWithRetry(DefaultExecutionMediator.java:209)
+	at org.mule.runtime.module.extension.internal.runtime.operation.DefaultExecutionMediator.lambda$applyBeforeInterceptors$9(DefaultExecutionMediator.java:291)
+	at org.mule.runtime.core.internal.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:15)
+	at org.mule.runtime.core.internal.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:80)
+	at org.mule.runtime.core.internal.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:46)
+	at org.mule.runtime.core.internal.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:43)
+	at org.mule.runtime.core.internal.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:37)
+	at org.mule.runtime.core.api.execution.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:195)
+	at org.mule.runtime.module.extension.internal.runtime.operation.DefaultExecutionMediator.withExecutionTemplate(DefaultExecutionMediator.java:332)
+	at org.mule.runtime.module.extension.internal.runtime.operation.DefaultExecutionMediator.applyBeforeInterceptors(DefaultExecutionMediator.java:286)
+	at org.mule.runtime.module.extension.internal.runtime.operation.ComponentMessageProcessor.resolveParameters(ComponentMessageProcessor.java:1131)
+	at org.mule.runtime.core.internal.processor.interceptor.ReactiveInterceptorAdapter.setInternalParamsForNotParamResolver(ReactiveInterceptorAdapter.java:244)
+	at org.mule.runtime.core.internal.processor.interceptor.ReactiveInterceptorAdapter.resolveParameters(ReactiveInterceptorAdapter.java:235)
+	at org.mule.runtime.core.internal.processor.interceptor.AbstractInterceptorAdapter.addResolvedParameters(AbstractInterceptorAdapter.java:67)
+	at org.mule.runtime.core.internal.processor.interceptor.ReactiveAroundInterceptorAdapter.doAround(ReactiveAroundInterceptorAdapter.java:81)
+	at org.mule.runtime.core.internal.processor.interceptor.ReactiveAroundInterceptorAdapter.lambda$doApply$0(ReactiveAroundInterceptorAdapter.java:71)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onNext(FluxFlatMap.java:386)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129)
+	at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2398)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:171)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:171)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:171)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:171)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onSubscribe(FluxFlatMap.java:371)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+	at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:55)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:62)
+	at reactor.core.publisher.FluxDeferContextual.subscribe(FluxDeferContextual.java:57)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4397)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onNext(FluxFlatMap.java:426)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:210)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:210)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:210)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:630)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:625)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:137)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:210)
+	at reactor.core.publisher.FluxOnAssembly$OnAssemblySubscriber.onNext(FluxOnAssembly.java:539)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129)
+	at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2398)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:171)
+	at reactor.core.publisher.FluxOnAssembly$OnAssemblySubscriber.request(FluxOnAssembly.java:649)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.request(FluxPeekFuseable.java:144)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.request(FluxHide.java:152)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.request(FluxContextWrite.java:136)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.request(FluxPeekFuseable.java:144)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.request(FluxPeekFuseable.java:144)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.request(FluxPeekFuseable.java:144)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onSubscribe(FluxFlatMap.java:371)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onSubscribe(FluxPeekFuseable.java:178)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onSubscribe(FluxPeekFuseable.java:178)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onSubscribe(FluxPeekFuseable.java:178)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onSubscribe(FluxContextWrite.java:101)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onSubscribe(AbstractMessageProcessorChain.java:651)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onSubscribe(FluxHide.java:122)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onSubscribe(FluxPeekFuseable.java:178)
+	at reactor.core.publisher.FluxOnAssembly$OnAssemblySubscriber.onSubscribe(FluxOnAssembly.java:633)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+	at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:55)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:62)
+	at reactor.core.publisher.FluxDeferContextual.subscribe(FluxDeferContextual.java:57)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:62)
+	at reactor.core.publisher.FluxDeferContextual.subscribe(FluxDeferContextual.java:57)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:62)
+	at reactor.core.publisher.FluxDeferContextual.subscribe(FluxDeferContextual.java:57)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8466)
+	at reactor.core.publisher.Flux.subscribeWith(Flux.java:8639)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8436)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8360)
+	at org.mule.runtime.core.internal.util.rx.RxUtils.lambda$subscribeFluxOnPublisherSubscription$0(RxUtils.java:128)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableConditionalSubscriber.onSubscribe(FluxPeekFuseable.java:462)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableConditionalSubscriber.onSubscribe(FluxPeekFuseable.java:471)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onSubscribe(FluxContextWrite.java:101)
+	at reactor.core.publisher.FluxCreate.subscribe(FluxCreate.java:93)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:62)
+	at reactor.core.publisher.FluxDeferContextual.subscribe(FluxDeferContextual.java:57)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:62)
+	at reactor.core.publisher.FluxDeferContextual.subscribe(FluxDeferContextual.java:57)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:62)
+	at reactor.core.publisher.FluxDeferContextual.subscribe(FluxDeferContextual.java:57)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4397)
+	at reactor.core.publisher.Mono.subscribeWith(Mono.java:4512)
+	at reactor.core.publisher.Mono.toFuture(Mono.java:4917)
+	at org.mule.runtime.core.internal.processor.interceptor.ReactiveInterceptionAction.proceed(ReactiveInterceptionAction.java:76)
+	at com.avioconsulting.mule.opentelemetry.internal.interceptor.ProcessorTracingInterceptor.around(ProcessorTracingInterceptor.java:192)
+	at org.mule.runtime.core.internal.processor.interceptor.ProcessorInterceptorWrapper.around(ProcessorInterceptorWrapper.java:68)
+	at org.mule.runtime.core.internal.processor.interceptor.ReactiveAroundInterceptorAdapter.lambda$doAround$3(ReactiveAroundInterceptorAdapter.java:94)
+	at org.mule.runtime.core.api.util.ExceptionUtils.tryExpecting(ExceptionUtils.java:224)
+	at org.mule.runtime.core.api.util.ClassUtils.withContextClassLoader(ClassUtils.java:1102)
+	at org.mule.runtime.core.api.util.ClassUtils.withContextClassLoader(ClassUtils.java:1020)
+	at org.mule.runtime.core.internal.processor.interceptor.ReactiveAroundInterceptorAdapter.doAround(ReactiveAroundInterceptorAdapter.java:93)
+	at org.mule.runtime.core.internal.processor.interceptor.ReactiveAroundInterceptorAdapter.lambda$doApply$0(ReactiveAroundInterceptorAdapter.java:71)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onNext(FluxFlatMap.java:386)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129)
+	at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2398)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:171)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:171)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:171)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:171)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onSubscribe(FluxFlatMap.java:371)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:96)
+	at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:55)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:62)
+	at reactor.core.publisher.FluxDeferContextual.subscribe(FluxDeferContextual.java:57)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4397)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onNext(FluxFlatMap.java:426)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:210)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.tryEmit(FluxFlatMap.java:543)
+	at reactor.core.publisher.FluxFlatMap$FlatMapInner.onNext(FluxFlatMap.java:984)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.tryEmit(FluxFlatMap.java:543)
+	at reactor.core.publisher.FluxFlatMap$FlatMapInner.onNext(FluxFlatMap.java:984)
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1816)
+	at reactor.core.publisher.MonoCompletionStage.lambda$subscribe$0(MonoCompletionStage.java:83)
+	at java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:774)
+	at java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:750)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:1975)
+	at reactor.core.publisher.MonoToCompletableFuture.onNext(MonoToCompletableFuture.java:64)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.tryEmit(FluxFlatMap.java:543)
+	at reactor.core.publisher.FluxFlatMap$FlatMapInner.onNext(FluxFlatMap.java:984)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:210)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:630)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:625)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:137)
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableSubscriber.onNext(FluxHandleFuseable.java:191)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:630)
+	at org.mule.runtime.core.privileged.processor.chain.AbstractMessageProcessorChain$2.onNext(AbstractMessageProcessorChain.java:625)
+	at reactor.core.publisher.FluxHide$SuppressFuseableSubscriber.onNext(FluxHide.java:137)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:210)
+	at reactor.core.publisher.FluxOnAssembly$OnAssemblySubscriber.onNext(FluxOnAssembly.java:539)
+	at reactor.core.publisher.FluxSubscribeOnValue$ScheduledScalar.run(FluxSubscribeOnValue.java:180)
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:68)
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:28)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.mule.service.scheduler.internal.AbstractRunnableFutureDecorator.doRun(AbstractRunnableFutureDecorator.java:180)
+	at org.mule.service.scheduler.internal.RunnableFutureDecorator.run(RunnableFutureDecorator.java:55)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: com.mchange.v2.resourcepool.TimeoutException: A client timed out while waiting to acquire a resource from com.mchange.v2.resourcepool.BasicResourcePool@1752d4eb -- timeout at awaitAvailable()
+	at com.mchange.v2.resourcepool.BasicResourcePool.awaitAvailable(BasicResourcePool.java:1505)
+	at com.mchange.v2.resourcepool.BasicResourcePool.prelimCheckoutResource(BasicResourcePool.java:644)
+	at com.mchange.v2.resourcepool.BasicResourcePool.checkoutResource(BasicResourcePool.java:554)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutAndMarkConnectionInUse(C3P0PooledConnectionPool.java:758)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:685)
+	... 220 more
+
